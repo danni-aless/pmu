@@ -1,0 +1,1 @@
+{"blackbox_models": ["/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib", "/foss/designs/pmu_design/rca/1-librelane/macros/pmu/vh/pmu.vh"], "libs_synth": ["/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/tmp/da7da3cb70774558920a772ed0b4fba4.lib"]}

@@ -1,0 +1,2 @@
+magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc /usr/local/lib/python3.12/dist-packages/librelane/scripts/magic/wrapper.tcl
+magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc /usr/local/lib/python3.12/dist-packages/librelane/scripts/magic/wrapper.tcl

@@ -1,0 +1,29 @@
+88. Printing statistics.
+
+=== pmu ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      162        - wires
+      173        - wire bits
+      154        - public wires
+      165        - public wire bits
+        8        - ports
+       19        - port bits
+      155  596.822 cells
+        3        -   $_DFF_PP0_
+        8        -   $_MUX_
+        1        -   $_XOR_
+      134  502.982   sky130_fd_sc_hd__buf_1
+        6   30.029   sky130_fd_sc_hd__buf_2
+        1   11.261   sky130_fd_sc_hd__mux2_1
+        2    52.55   sky130_fd_sc_hd__mux4_1
+
+   Area for cell type $_DFF_PP0_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+   Chip area for module '\pmu': 596.822400
+     of which used for sequential elements: 0.000000 (0.00%)
+

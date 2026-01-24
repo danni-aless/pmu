@@ -1,0 +1,55 @@
+{
+   "creator": "Yosys 0.60 (git sha1 5bafeb77d, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/tmp/da7da3cb70774558920a772ed0b4fba4.lib ",
+   "modules": {
+      "\\rca": {
+         "num_wires":         122,
+         "num_wire_bits":     169,
+         "num_pub_wires":     59,
+         "num_pub_wire_bits": 106,
+         "num_ports":         9,
+         "num_port_bits":     56,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         131,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 17,
+            "$_AND_": 2,
+            "$_DFF_PP0_": 50,
+            "$_NAND_": 14,
+            "$_NOR_": 14,
+            "$_OR_": 1,
+            "$_XNOR_": 17,
+            "$_XOR_": 15,
+            "pmu": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         122,
+         "num_wire_bits":     169,
+         "num_pub_wires":     59,
+         "num_pub_wire_bits": 106,
+         "num_ports":         9,
+         "num_port_bits":     56,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         131,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 17,
+            "$_AND_": 2,
+            "$_DFF_PP0_": 50,
+            "$_NAND_": 14,
+            "$_NOR_": 14,
+            "$_OR_": 1,
+            "$_XNOR_": 17,
+            "$_XOR_": 15,
+            "pmu": 1
+         }
+      }
+}
+

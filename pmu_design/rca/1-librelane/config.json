@@ -1,0 +1,53 @@
+{
+  	"//": "Required variables",
+    "DESIGN_NAME": "rca",
+    "VERILOG_FILES": [
+        "dir::rca.v",
+        "dir::fa.v"
+    ],
+    "CLOCK_PERIOD": 15,
+    "CLOCK_PORT": "clk",
+    
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 200 200",
+
+	"//": "A fallback SDC file for when a step-specific SDC file is not defined",
+	"FALLBACK_SDC_FILE": "dir::rca.sdc",
+    
+    "//": "Custom pin configuration file",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+    
+    "//": "Enable adding a core ring around the design",
+    "FP_PDN_CORE_RING": true,
+    
+	"MACROS": {
+		"pmu": {
+			"instances": {
+				"pmu_inst": {
+					"location": [100, 1],
+					"orientation": "N"
+				}
+			},
+			"gds": ["dir::macros/pmu/gds/pmu.gds"],
+			"lef": ["dir::macros/pmu/lef/pmu.lef"],
+			"vh": ["dir::macros/pmu/vh/pmu.vh"],
+			"nl": ["dir::macros/pmu/nl/pmu.nl.v"],
+			"lib": {
+				"max_ff_n40C_1v95": "dir::macros/pmu/lib/max_ff_n40C_1v95/pmu__max_ff_n40C_1v95.lib",
+				"max_ss_100C_1v60": "dir::macros/pmu/lib/max_ss_100C_1v60/pmu__max_ss_100C_1v60.lib",
+				"max_tt_025C_1v80": "dir::macros/pmu/lib/max_tt_025C_1v80/pmu__max_tt_025C_1v80.lib",
+				"min_ff_n40C_1v95": "dir::macros/pmu/lib/min_ff_n40C_1v95/pmu__min_ff_n40C_1v95.lib",
+				"min_ss_100C_1v60": "dir::macros/pmu/lib/min_ss_100C_1v60/pmu__min_ss_100C_1v60.lib",
+				"min_tt_025C_1v80": "dir::macros/pmu/lib/min_tt_025C_1v80/pmu__min_tt_025C_1v80.lib",
+				"nom_ff_n40C_1v95": "dir::macros/pmu/lib/nom_ff_n40C_1v95/pmu__nom_ff_n40C_1v95.lib",
+				"nom_ss_100C_1v60": "dir::macros/pmu/lib/nom_ss_100C_1v60/pmu__nom_ss_100C_1v60.lib",
+				"nom_tt_025C_1v80": "dir::macros/pmu/lib/nom_tt_025C_1v80/pmu__nom_tt_025C_1v80.lib"
+			},
+			"spef": {
+				"nom_*": "dir::macros/pmu/spef/nom/pmu.nom.spef",
+				"min_*": "dir::macros/pmu/spef/min/pmu.min.spef",
+				"max_*": "dir::macros/pmu/spef/max/pmu.max.spef"
+			}
+		}
+	}
+}

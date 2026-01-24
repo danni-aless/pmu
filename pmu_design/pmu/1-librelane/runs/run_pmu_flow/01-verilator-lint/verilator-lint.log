@@ -1,0 +1,1037 @@
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:61:1: Instance has missing pin: 'VPWR'
+   61 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4740:59: ... Location of port declaration
+ 4740 | module sky130_fd_sc_hd__mux4_1(X, A0, A1, A2, A3, S0, S1, VPWR, VGND, VPB, VNB);
+      |                                                           ^~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.042
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:61:1: Instance has missing pin: 'VGND'
+   61 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4740:65: ... Location of port declaration
+ 4740 | module sky130_fd_sc_hd__mux4_1(X, A0, A1, A2, A3, S0, S1, VPWR, VGND, VPB, VNB);
+      |                                                                 ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:61:1: Instance has missing pin: 'VPB'
+   61 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4740:71: ... Location of port declaration
+ 4740 | module sky130_fd_sc_hd__mux4_1(X, A0, A1, A2, A3, S0, S1, VPWR, VGND, VPB, VNB);
+      |                                                                       ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:61:1: Instance has missing pin: 'VNB'
+   61 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4740:76: ... Location of port declaration
+ 4740 | module sky130_fd_sc_hd__mux4_1(X, A0, A1, A2, A3, S0, S1, VPWR, VGND, VPB, VNB);
+      |                                                                            ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:73:1: Instance has missing pin: 'VPWR'
+   73 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4740:59: ... Location of port declaration
+ 4740 | module sky130_fd_sc_hd__mux4_1(X, A0, A1, A2, A3, S0, S1, VPWR, VGND, VPB, VNB);
+      |                                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:73:1: Instance has missing pin: 'VGND'
+   73 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4740:65: ... Location of port declaration
+ 4740 | module sky130_fd_sc_hd__mux4_1(X, A0, A1, A2, A3, S0, S1, VPWR, VGND, VPB, VNB);
+      |                                                                 ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:73:1: Instance has missing pin: 'VPB'
+   73 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4740:71: ... Location of port declaration
+ 4740 | module sky130_fd_sc_hd__mux4_1(X, A0, A1, A2, A3, S0, S1, VPWR, VGND, VPB, VNB);
+      |                                                                       ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:73:1: Instance has missing pin: 'VNB'
+   73 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4740:76: ... Location of port declaration
+ 4740 | module sky130_fd_sc_hd__mux4_1(X, A0, A1, A2, A3, S0, S1, VPWR, VGND, VPB, VNB);
+      |                                                                            ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:85:1: Instance has missing pin: 'VPWR'
+   85 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4607:46: ... Location of port declaration
+ 4607 | module sky130_fd_sc_hd__mux2_1(X, A0, A1, S, VPWR, VGND, VPB, VNB);
+      |                                              ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:85:1: Instance has missing pin: 'VGND'
+   85 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4607:52: ... Location of port declaration
+ 4607 | module sky130_fd_sc_hd__mux2_1(X, A0, A1, S, VPWR, VGND, VPB, VNB);
+      |                                                    ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:85:1: Instance has missing pin: 'VPB'
+   85 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4607:58: ... Location of port declaration
+ 4607 | module sky130_fd_sc_hd__mux2_1(X, A0, A1, S, VPWR, VGND, VPB, VNB);
+      |                                                          ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:85:1: Instance has missing pin: 'VNB'
+   85 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:4607:63: ... Location of port declaration
+ 4607 | module sky130_fd_sc_hd__mux2_1(X, A0, A1, S, VPWR, VGND, VPB, VNB);
+      |                                                               ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131:1: Instance has missing pin: 'VPWR'
+  131 | x1 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131:1: Instance has missing pin: 'VGND'
+  131 | x1 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131:1: Instance has missing pin: 'VPB'
+  131 | x1 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131:1: Instance has missing pin: 'VNB'
+  131 | x1 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138:1: Instance has missing pin: 'VPWR'
+  138 | x2 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138:1: Instance has missing pin: 'VGND'
+  138 | x2 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138:1: Instance has missing pin: 'VPB'
+  138 | x2 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138:1: Instance has missing pin: 'VNB'
+  138 | x2 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145:1: Instance has missing pin: 'VPWR'
+  145 | x3 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145:1: Instance has missing pin: 'VGND'
+  145 | x3 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145:1: Instance has missing pin: 'VPB'
+  145 | x3 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145:1: Instance has missing pin: 'VNB'
+  145 | x3 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152:1: Instance has missing pin: 'VPWR'
+  152 | x4 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152:1: Instance has missing pin: 'VGND'
+  152 | x4 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152:1: Instance has missing pin: 'VPB'
+  152 | x4 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152:1: Instance has missing pin: 'VNB'
+  152 | x4 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159:1: Instance has missing pin: 'VPWR'
+  159 | x5 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159:1: Instance has missing pin: 'VGND'
+  159 | x5 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159:1: Instance has missing pin: 'VPB'
+  159 | x5 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159:1: Instance has missing pin: 'VNB'
+  159 | x5 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166:1: Instance has missing pin: 'VPWR'
+  166 | x6 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166:1: Instance has missing pin: 'VGND'
+  166 | x6 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166:1: Instance has missing pin: 'VPB'
+  166 | x6 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166:1: Instance has missing pin: 'VNB'
+  166 | x6 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173:1: Instance has missing pin: 'VPWR'
+  173 | x7 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173:1: Instance has missing pin: 'VGND'
+  173 | x7 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173:1: Instance has missing pin: 'VPB'
+  173 | x7 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173:1: Instance has missing pin: 'VNB'
+  173 | x7 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180:1: Instance has missing pin: 'VPWR'
+  180 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180:1: Instance has missing pin: 'VGND'
+  180 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180:1: Instance has missing pin: 'VPB'
+  180 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180:1: Instance has missing pin: 'VNB'
+  180 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187:1: Instance has missing pin: 'VPWR'
+  187 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187:1: Instance has missing pin: 'VGND'
+  187 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187:1: Instance has missing pin: 'VPB'
+  187 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187:1: Instance has missing pin: 'VNB'
+  187 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194:1: Instance has missing pin: 'VPWR'
+  194 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194:1: Instance has missing pin: 'VGND'
+  194 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194:1: Instance has missing pin: 'VPB'
+  194 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194:1: Instance has missing pin: 'VNB'
+  194 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201:1: Instance has missing pin: 'VPWR'
+  201 | x11 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201:1: Instance has missing pin: 'VGND'
+  201 | x11 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201:1: Instance has missing pin: 'VPB'
+  201 | x11 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201:1: Instance has missing pin: 'VNB'
+  201 | x11 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208:1: Instance has missing pin: 'VPWR'
+  208 | x12 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208:1: Instance has missing pin: 'VGND'
+  208 | x12 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208:1: Instance has missing pin: 'VPB'
+  208 | x12 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208:1: Instance has missing pin: 'VNB'
+  208 | x12 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215:1: Instance has missing pin: 'VPWR'
+  215 | x13 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215:1: Instance has missing pin: 'VGND'
+  215 | x13 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215:1: Instance has missing pin: 'VPB'
+  215 | x13 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215:1: Instance has missing pin: 'VNB'
+  215 | x13 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222:1: Instance has missing pin: 'VPWR'
+  222 | x14 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222:1: Instance has missing pin: 'VGND'
+  222 | x14 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222:1: Instance has missing pin: 'VPB'
+  222 | x14 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222:1: Instance has missing pin: 'VNB'
+  222 | x14 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229:1: Instance has missing pin: 'VPWR'
+  229 | x15 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229:1: Instance has missing pin: 'VGND'
+  229 | x15 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229:1: Instance has missing pin: 'VPB'
+  229 | x15 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229:1: Instance has missing pin: 'VNB'
+  229 | x15 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236:1: Instance has missing pin: 'VPWR'
+  236 | x16 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236:1: Instance has missing pin: 'VGND'
+  236 | x16 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236:1: Instance has missing pin: 'VPB'
+  236 | x16 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236:1: Instance has missing pin: 'VNB'
+  236 | x16 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243:1: Instance has missing pin: 'VPWR'
+  243 | x17 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243:1: Instance has missing pin: 'VGND'
+  243 | x17 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243:1: Instance has missing pin: 'VPB'
+  243 | x17 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243:1: Instance has missing pin: 'VNB'
+  243 | x17 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250:1: Instance has missing pin: 'VPWR'
+  250 | x18 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250:1: Instance has missing pin: 'VGND'
+  250 | x18 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250:1: Instance has missing pin: 'VPB'
+  250 | x18 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250:1: Instance has missing pin: 'VNB'
+  250 | x18 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257:1: Instance has missing pin: 'VPWR'
+  257 | x19 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257:1: Instance has missing pin: 'VGND'
+  257 | x19 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257:1: Instance has missing pin: 'VPB'
+  257 | x19 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257:1: Instance has missing pin: 'VNB'
+  257 | x19 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264:1: Instance has missing pin: 'VPWR'
+  264 | x20 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2058:37: ... Location of port declaration
+ 2058 | module sky130_fd_sc_hd__buf_2(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264:1: Instance has missing pin: 'VGND'
+  264 | x20 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2058:43: ... Location of port declaration
+ 2058 | module sky130_fd_sc_hd__buf_2(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264:1: Instance has missing pin: 'VPB'
+  264 | x20 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2058:49: ... Location of port declaration
+ 2058 | module sky130_fd_sc_hd__buf_2(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264:1: Instance has missing pin: 'VNB'
+  264 | x20 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2058:54: ... Location of port declaration
+ 2058 | module sky130_fd_sc_hd__buf_2(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:301:1: Instance has missing pin: 'VPWR'
+  301 | x1 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:301:1: Instance has missing pin: 'VGND'
+  301 | x1 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:301:1: Instance has missing pin: 'VPB'
+  301 | x1 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:301:1: Instance has missing pin: 'VNB'
+  301 | x1 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:308:1: Instance has missing pin: 'VPWR'
+  308 | x2 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:308:1: Instance has missing pin: 'VGND'
+  308 | x2 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:308:1: Instance has missing pin: 'VPB'
+  308 | x2 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:308:1: Instance has missing pin: 'VNB'
+  308 | x2 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:315:1: Instance has missing pin: 'VPWR'
+  315 | x3 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:315:1: Instance has missing pin: 'VGND'
+  315 | x3 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:315:1: Instance has missing pin: 'VPB'
+  315 | x3 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:315:1: Instance has missing pin: 'VNB'
+  315 | x3 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:322:1: Instance has missing pin: 'VPWR'
+  322 | x4 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:322:1: Instance has missing pin: 'VGND'
+  322 | x4 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:322:1: Instance has missing pin: 'VPB'
+  322 | x4 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:322:1: Instance has missing pin: 'VNB'
+  322 | x4 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:329:1: Instance has missing pin: 'VPWR'
+  329 | x5 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:329:1: Instance has missing pin: 'VGND'
+  329 | x5 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:329:1: Instance has missing pin: 'VPB'
+  329 | x5 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:329:1: Instance has missing pin: 'VNB'
+  329 | x5 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:336:1: Instance has missing pin: 'VPWR'
+  336 | x6 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:336:1: Instance has missing pin: 'VGND'
+  336 | x6 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:336:1: Instance has missing pin: 'VPB'
+  336 | x6 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:336:1: Instance has missing pin: 'VNB'
+  336 | x6 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:343:1: Instance has missing pin: 'VPWR'
+  343 | x7 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:343:1: Instance has missing pin: 'VGND'
+  343 | x7 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:343:1: Instance has missing pin: 'VPB'
+  343 | x7 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:343:1: Instance has missing pin: 'VNB'
+  343 | x7 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:350:1: Instance has missing pin: 'VPWR'
+  350 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:350:1: Instance has missing pin: 'VGND'
+  350 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:350:1: Instance has missing pin: 'VPB'
+  350 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:350:1: Instance has missing pin: 'VNB'
+  350 | x8 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:357:1: Instance has missing pin: 'VPWR'
+  357 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:357:1: Instance has missing pin: 'VGND'
+  357 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:357:1: Instance has missing pin: 'VPB'
+  357 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:357:1: Instance has missing pin: 'VNB'
+  357 | x9 ( 
+      | ^~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:364:1: Instance has missing pin: 'VPWR'
+  364 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:364:1: Instance has missing pin: 'VGND'
+  364 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:364:1: Instance has missing pin: 'VPB'
+  364 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:364:1: Instance has missing pin: 'VNB'
+  364 | x10 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:371:1: Instance has missing pin: 'VPWR'
+  371 | x11 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:371:1: Instance has missing pin: 'VGND'
+  371 | x11 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:371:1: Instance has missing pin: 'VPB'
+  371 | x11 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:371:1: Instance has missing pin: 'VNB'
+  371 | x11 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:378:1: Instance has missing pin: 'VPWR'
+  378 | x12 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:378:1: Instance has missing pin: 'VGND'
+  378 | x12 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:378:1: Instance has missing pin: 'VPB'
+  378 | x12 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:378:1: Instance has missing pin: 'VNB'
+  378 | x12 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:385:1: Instance has missing pin: 'VPWR'
+  385 | x13 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:385:1: Instance has missing pin: 'VGND'
+  385 | x13 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:385:1: Instance has missing pin: 'VPB'
+  385 | x13 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:385:1: Instance has missing pin: 'VNB'
+  385 | x13 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:392:1: Instance has missing pin: 'VPWR'
+  392 | x14 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:392:1: Instance has missing pin: 'VGND'
+  392 | x14 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:392:1: Instance has missing pin: 'VPB'
+  392 | x14 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:392:1: Instance has missing pin: 'VNB'
+  392 | x14 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:399:1: Instance has missing pin: 'VPWR'
+  399 | x15 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:399:1: Instance has missing pin: 'VGND'
+  399 | x15 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:399:1: Instance has missing pin: 'VPB'
+  399 | x15 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:399:1: Instance has missing pin: 'VNB'
+  399 | x15 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:406:1: Instance has missing pin: 'VPWR'
+  406 | x16 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:406:1: Instance has missing pin: 'VGND'
+  406 | x16 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:406:1: Instance has missing pin: 'VPB'
+  406 | x16 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:406:1: Instance has missing pin: 'VNB'
+  406 | x16 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:413:1: Instance has missing pin: 'VPWR'
+  413 | x17 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:413:1: Instance has missing pin: 'VGND'
+  413 | x17 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:413:1: Instance has missing pin: 'VPB'
+  413 | x17 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:413:1: Instance has missing pin: 'VNB'
+  413 | x17 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:420:1: Instance has missing pin: 'VPWR'
+  420 | x18 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:420:1: Instance has missing pin: 'VGND'
+  420 | x18 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:420:1: Instance has missing pin: 'VPB'
+  420 | x18 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:420:1: Instance has missing pin: 'VNB'
+  420 | x18 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:427:1: Instance has missing pin: 'VPWR'
+  427 | x19 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:427:1: Instance has missing pin: 'VGND'
+  427 | x19 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:427:1: Instance has missing pin: 'VPB'
+  427 | x19 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:427:1: Instance has missing pin: 'VNB'
+  427 | x19 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:434:1: Instance has missing pin: 'VPWR'
+  434 | x20 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:37: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                     ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:434:1: Instance has missing pin: 'VGND'
+  434 | x20 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:43: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                           ^~~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:434:1: Instance has missing pin: 'VPB'
+  434 | x20 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:49: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                 ^~~
+%Warning-PINMISSING: /foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:434:1: Instance has missing pin: 'VNB'
+  434 | x20 ( 
+      | ^~~
+                     /foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/tmp/102329b65eaa4a838fc1e838b0e514ad.bb.v:2013:54: ... Location of port declaration
+ 2013 | module sky130_fd_sc_hd__buf_1(X, A, VPWR, VGND, VPB, VNB);
+      |                                                      ^~~
+- V e r i l a t i o n   R e p o r t: Verilator 5.042 2025-11-02 rev v5.042
+- Verilator: Built from 0.575 MB sources in 451 modules, into 0.012 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.152 s (elab=0.011, cvt=0.017, bld=0.000); cpu 0.038 s on 1 threads; alloced 39.098 MB

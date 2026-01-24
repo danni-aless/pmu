@@ -1,0 +1,114 @@
+
+.title Testbench for PMU (sky130) - PEX
+
+** Include tecnology library and standard cells
+.lib "/foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+** Include spice netlist of the circuit
+.include "pmu_pex.spice"
+
+** Global parameters
+.param VDD_VAL 		= 1.8
+.param VSS_VAL 		= 0
+.param CLOAD   		= 10f
+.param TRISE   		= 0.2n
+.param TFALL   		= 0.2n
+.param CLK_PERIOD	= 10n
+
+** Global nodes used in sky130 standard cells
+.global VGND VNB VPB VPWR
+
+** Power sources
+Vsupply VPWR 0 DC {VDD_VAL}
+Vground VGND 0 DC {VSS_VAL}
+VbulkP  VPB  0 DC {VDD_VAL}
+VbulkN  VNB  0 DC {VSS_VAL}
+
+** Generation of input stimuli
+** clk -> clk
+Vclk clk 0 PULSE(0 {VDD_VAL} {CLK_PERIOD/2} {TRISE} {TFALL} {CLK_PERIOD/2} {CLK_PERIOD})
+
+** rst -> rst
+Vrst rst 0 PWL(0 {VDD_VAL} {CLK_PERIOD} {VDD_VAL} {CLK_PERIOD+TFALL} 0)
+
+** se -> se
+Vse se 0 DC {0}
+
+** tdi -> tdi
+Vtdi tdi 0 DC {0}
+
+** delay_sel0, delay_sel1, delay_sel2 -> delay_sel[2:0]
+Vdelay_sel0 delay_sel0 0 PULSE(0 {VDD_VAL} {(3/2+4)*CLK_PERIOD+TRISE} {TRISE} {TFALL} {4*CLK_PERIOD} {8*CLK_PERIOD})
+Vdelay_sel1 delay_sel1 0 PULSE(0 {VDD_VAL} {(3/2+8)*CLK_PERIOD+TRISE} {TRISE} {TFALL} {8*CLK_PERIOD} {16*CLK_PERIOD})
+Vdelay_sel2 delay_sel2 0 PULSE(0 {VDD_VAL} {(3/2+16)*CLK_PERIOD+TRISE} {TRISE} {TFALL} {16*CLK_PERIOD} {32*CLK_PERIOD})
+
+** path0 path1 path2 path3 path4 path5 path6 path7 -> path[7:0]
+Vpath0 path0 0 PULSE(0 {VDD_VAL} {(3/2)*CLK_PERIOD+TRISE} {TRISE} {TFALL} {2*CLK_PERIOD} {4*CLK_PERIOD})
+Vpath1 path1 0 DC {0}
+Vpath2 path2 0 DC {0}
+Vpath3 path3 0 DC {0}
+Vpath4 path4 0 DC {0}
+Vpath5 path5 0 DC {0}
+Vpath6 path6 0 DC {0}
+Vpath7 path7 0 DC {0}
+
+** path_sel0, path_sel1, path_sel2 -> path_sel[2:0]
+Vpath_sel0 path_sel0 0 DC {0}
+Vpath_sel1 path_sel1 0 DC {0}
+Vpath_sel2 path_sel2 0 DC {0}
+
+** DUT instantiation
+** tdo -> tdo
+Xdut VGND VPWR clk delay_sel0 delay_sel1 delay_sel2
++ path0 path1 path2 path3 path4 path5 path6 path7
++ path_sel0 path_sel1 path_sel2 rst se tdi tdo pmu
+
+** Output capacitor
+Cout tdo 0 {CLOAD}
+
+** Tran simulation
+.tran 0.04n 320n
+
+** Measuring delays
+.meas tran delay_rise_sel000 TRIG v(path0) VAL=VDD_VAL/2 RISE=1 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=1
+.meas tran delay_fall_sel000 TRIG v(path0) VAL=VDD_VAL/2 FALL=1 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=1
+
+.meas tran delay_rise_sel001 TRIG v(path0) VAL=VDD_VAL/2 RISE=2 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=2
+.meas tran delay_fall_sel001 TRIG v(path0) VAL=VDD_VAL/2 FALL=2 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=2
+
+.meas tran delay_rise_sel010 TRIG v(path0) VAL=VDD_VAL/2 RISE=3 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=3
+.meas tran delay_fall_sel010 TRIG v(path0) VAL=VDD_VAL/2 FALL=3 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=3
+
+.meas tran delay_rise_sel011 TRIG v(path0) VAL=VDD_VAL/2 RISE=4 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=4
+.meas tran delay_fall_sel011 TRIG v(path0) VAL=VDD_VAL/2 FALL=4 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=4
+
+.meas tran delay_rise_sel100 TRIG v(path0) VAL=VDD_VAL/2 RISE=5 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=5
+.meas tran delay_fall_sel100 TRIG v(path0) VAL=VDD_VAL/2 FALL=5 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=5
+
+.meas tran delay_rise_sel101 TRIG v(path0) VAL=VDD_VAL/2 RISE=6 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=6
+.meas tran delay_fall_sel101 TRIG v(path0) VAL=VDD_VAL/2 FALL=6 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=6
+
+.meas tran delay_rise_sel110 TRIG v(path0) VAL=VDD_VAL/2 RISE=7 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=7
+.meas tran delay_fall_sel110 TRIG v(path0) VAL=VDD_VAL/2 FALL=7 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=7
+
+.meas tran delay_rise_sel111 TRIG v(path0) VAL=VDD_VAL/2 RISE=8 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=8
+.meas tran delay_fall_sel111 TRIG v(path0) VAL=VDD_VAL/2 FALL=8 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=8
+
+.control
+	run
+	** Plots
+	set color0=white
+	set color1=black
+	
+	plot v(clk)+2 v(rst)+2 v(xdut.dc_inst.in) v(xdut.shadow_q) title 'Shadow FF'
+	plot v(clk)+2 v(rst)+2 v(xdut.capture_d) v(xdut.capture_q) title 'Capture FF'
+	plot v(clk)+2 v(rst)+2 v(xdut._00_) v(tdo) title 'Monitor FF'
+	plot v(path0)+2 v(xdut.capture_d)+2 v(tdo) title 'Propagation delays'
+	plot v(delay_sel2)+4 v(delay_sel1)+2 v(delay_sel0) title 'delay_sel'
+	plot v(path_sel2)+4 v(path_sel1)+2 v(path_sel0) title 'path_sel'
+	
+	write data.raw v(clk) v(rst) v(xdut.dc_inst.in) v(xdut.shadow_q) v(xdut.capture_d) v(xdut.capture_q) v(xdut._00_) v(tdo)
+	+ v(path0) v(delay_sel2) v(delay_sel1) v(delay_sel0) v(path_sel2) v(path_sel1) v(path_sel0)
+.endc
+
+.end

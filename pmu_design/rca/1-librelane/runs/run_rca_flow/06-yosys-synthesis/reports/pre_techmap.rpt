@@ -1,0 +1,33 @@
+96. Printing statistics.
+
+=== rca ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      122 wires
+      169 wire bits
+       59 public wires
+      106 public wire bits
+        9 ports
+       56 port bits
+      131 cells
+       17   $_ANDNOT_
+        2   $_AND_
+       50   $_DFF_PP0_
+       14   $_NAND_
+       14   $_NOR_
+        1   $_OR_
+       17   $_XNOR_
+       15   $_XOR_
+        1   pmu
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_DFF_PP0_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type \pmu is unknown!
+

@@ -1,0 +1,1002 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60 (git sha1 5bafeb77d, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+1. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /foss/designs/pmu_design/rca/1-librelane/macros/pmu/vh/pmu.vh
+Parsing SystemVerilog input from `/foss/designs/pmu_design/rca/1-librelane/macros/pmu/vh/pmu.vh' to AST representation.
+verilog frontend filename /foss/designs/pmu_design/rca/1-librelane/macros/pmu/vh/pmu.vh
+Generating RTLIL representation for module `\pmu'.
+Successfully finished Verilog frontend.
+[INFO] Using SDC file '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/93-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+3. Executing Verilog-2005 frontend: /foss/designs/pmu_design/rca/1-librelane/rca.v
+Parsing SystemVerilog input from `/foss/designs/pmu_design/rca/1-librelane/rca.v' to AST representation.
+verilog frontend filename /foss/designs/pmu_design/rca/1-librelane/rca.v
+Storing AST representation for module `$abstract\rca'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /foss/designs/pmu_design/rca/1-librelane/fa.v
+Parsing SystemVerilog input from `/foss/designs/pmu_design/rca/1-librelane/fa.v' to AST representation.
+verilog frontend filename /foss/designs/pmu_design/rca/1-librelane/fa.v
+Storing AST representation for module `$abstract\fa'.
+Successfully finished Verilog frontend.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+6. Executing AST frontend in derive mode using pre-parsed AST for module `\rca'.
+Generating RTLIL representation for module `\rca'.
+
+6.1. Analyzing design hierarchy..
+Top module:  \rca
+
+6.2. Executing AST frontend in derive mode using pre-parsed AST for module `\fa'.
+Generating RTLIL representation for module `\fa'.
+
+6.3. Analyzing design hierarchy..
+Top module:  \rca
+Used module:     \fa
+
+6.4. Analyzing design hierarchy..
+Top module:  \rca
+Used module:     \fa
+Removing unused module `$abstract\fa'.
+Removing unused module `$abstract\rca'.
+Removed 2 unused modules.
+Renaming module rca to rca.
+
+7. Generating Graphviz representation of design.
+Writing dot description to `/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/93-yosys-synthesis/hierarchy.dot'.
+Dumping module rca to page 1.
+
+8. Executing TRIBUF pass.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \rca
+Used module:     \fa
+
+9.2. Analyzing design hierarchy..
+Top module:  \rca
+Used module:     \fa
+Removed 0 unused modules.
+
+10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+11. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1 in module rca.
+Removed a total of 0 dead cases.
+
+12. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 5 redundant assignments.
+Promoted 0 assignments to connections.
+
+13. Executing PROC_INIT pass (extract init attributes).
+
+14. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\rca.$proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1'.
+
+15. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+16. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\rca.$proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1'.
+     1/5: $0\cout[0:0]
+     2/5: $0\s[15:0]
+     3/5: $0\cin_q[0:0]
+     4/5: $0\b_q[15:0]
+     5/5: $0\a_q[15:0]
+
+17. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+18. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\rca.\s' using process `\rca.$proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1'.
+  created $adff cell `$procdff$10' with positive edge clock and positive level reset.
+Creating register for signal `\rca.\cout' using process `\rca.$proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1'.
+  created $adff cell `$procdff$13' with positive edge clock and positive level reset.
+Creating register for signal `\rca.\a_q' using process `\rca.$proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1'.
+  created $adff cell `$procdff$16' with positive edge clock and positive level reset.
+Creating register for signal `\rca.\b_q' using process `\rca.$proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1'.
+  created $adff cell `$procdff$19' with positive edge clock and positive level reset.
+Creating register for signal `\rca.\cin_q' using process `\rca.$proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1'.
+  created $adff cell `$procdff$22' with positive edge clock and positive level reset.
+
+19. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+20. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `rca.$proc$/foss/designs/pmu_design/rca/1-librelane/rca.v:40$1'.
+Cleaned up 0 empty switches.
+
+21. Executing CHECK pass (checking for obvious problems).
+Checking module rca...
+Checking module fa...
+Found and reported 0 problems.
+
+22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+<suppressed ~5 debug messages>
+Optimizing module fa.
+
+23. Executing FLATTEN pass (flatten design).
+Deleting now unused module fa.
+<suppressed ~16 debug messages>
+
+24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+25. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+Removed 0 unused cells and 42 unused wires.
+<suppressed ~1 debug messages>
+
+26. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+27. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+<suppressed ~48 debug messages>
+Removed a total of 16 cells.
+
+28. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rca..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+29. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rca.
+Performed a total of 0 changes.
+
+30. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+31. Executing OPT_DFF pass (perform DFF optimizations).
+
+32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+34. Rerunning OPT passes. (Maybe there is more to do…)
+
+35. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rca..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+36. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rca.
+Performed a total of 0 changes.
+
+37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+38. Executing OPT_DFF pass (perform DFF optimizations).
+
+39. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+40. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+41. Executing FSM pass (extract and optimize FSM).
+
+41.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+41.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+41.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+41.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+41.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+41.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+41.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+41.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+42. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+43. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+44. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rca..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+45. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rca.
+Performed a total of 0 changes.
+
+46. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+47. Executing OPT_DFF pass (perform DFF optimizations).
+
+48. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+49. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+50. Executing WREDUCE pass (reducing word size of cells).
+
+51. Executing PEEPOPT pass (run peephole optimizers).
+
+52. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+53. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module rca:
+  created 0 $alu and 0 $macc cells.
+
+54. Executing SHARE pass (SAT-based resource sharing).
+
+55. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+56. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+57. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rca..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+58. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rca.
+Performed a total of 0 changes.
+
+59. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+60. Executing OPT_DFF pass (perform DFF optimizations).
+
+61. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+62. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+63. Executing MEMORY pass.
+
+63.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+63.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+63.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+63.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+63.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+63.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+63.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+63.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+63.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+63.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+64. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+65. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+66. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+67. Executing OPT_DFF pass (perform DFF optimizations).
+
+68. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+69. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+70. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+71. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+72. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rca..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+73. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rca.
+Performed a total of 0 changes.
+
+74. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+75. Executing OPT_SHARE pass.
+
+76. Executing OPT_DFF pass (perform DFF optimizations).
+
+77. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+78. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+79. Executing TECHMAP pass (map to technology primitives).
+
+79.1. Executing Verilog-2005 frontend: /foss/tools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/foss/tools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+verilog frontend filename /foss/tools/yosys/bin/../share/yosys/techmap.v
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `\$connect'.
+Generating RTLIL representation for module `\$input_port'.
+Successfully finished Verilog frontend.
+
+79.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $xor.
+No more expansions possible.
+<suppressed ~162 debug messages>
+
+80. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+81. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+82. Executing OPT_DFF pass (perform DFF optimizations).
+
+83. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+84. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+85. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+86. Executing OPT_DFF pass (perform DFF optimizations).
+
+87. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+88. Executing ABC pass (technology mapping using ABC).
+
+88.1. Extracting gate netlist of module `\rca' to `<abc-temp-dir>/input.blif'..
+
+88.1.1. Executed ABC.
+Extracted 80 gates and 113 wires to a netlist network with 33 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Dec 21 2025 19:49:10)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-TzLp2Q/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+
+88.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       17
+ABC RESULTS:              NAND cells:       14
+ABC RESULTS:               NOR cells:       14
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:              XNOR cells:       17
+ABC RESULTS:               XOR cells:       15
+ABC RESULTS:        internal signals:       63
+ABC RESULTS:           input signals:       33
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+Removing global temp directory.
+
+89. Executing OPT pass (performing simple optimizations).
+
+89.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+89.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+89.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+89.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+Removed 0 unused cells and 98 unused wires.
+<suppressed ~1 debug messages>
+
+89.5. Finished fast OPT passes.
+
+90. Executing HIERARCHY pass (managing design hierarchy).
+
+90.1. Analyzing design hierarchy..
+Top module:  \rca
+
+90.2. Analyzing design hierarchy..
+Top module:  \rca
+Removed 0 unused modules.
+
+91. Executing CHECK pass (checking for obvious problems).
+Checking module rca...
+Found and reported 0 problems.
+
+92. Printing statistics.
+
+=== rca ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      158 wires
+      266 wire bits
+       95 public wires
+      203 public wire bits
+        9 ports
+       56 port bits
+      147 cells
+       17   $_ANDNOT_
+        2   $_AND_
+       50   $_DFF_PP0_
+       14   $_NAND_
+       14   $_NOR_
+        1   $_OR_
+       17   $_XNOR_
+       15   $_XOR_
+       16   $scopeinfo
+        1   pmu
+
+93. Generating Graphviz representation of design.
+Writing dot description to `/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/93-yosys-synthesis/primitive_techmap.dot'.
+Dumping module rca to page 1.
+
+94. Executing OPT pass (performing simple optimizations).
+
+94.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+94.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+94.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rca..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+94.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rca.
+Performed a total of 0 changes.
+
+94.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rca'.
+Removed a total of 0 cells.
+
+94.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+94.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+
+94.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rca.
+
+94.9. Finished fast OPT passes. (There is nothing left to do.)
+
+95. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+Removed 16 unused cells and 36 unused wires.
+<suppressed ~52 debug messages>
+{
+   "creator": "Yosys 0.60 (git sha1 5bafeb77d, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/tmp/d05321c9a505410d820173d9770f4316.lib ",
+   "modules": {
+      "\\rca": {
+         "num_wires":         122,
+         "num_wire_bits":     169,
+         "num_pub_wires":     59,
+         "num_pub_wire_bits": 106,
+         "num_ports":         9,
+         "num_port_bits":     56,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         131,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 17,
+            "$_AND_": 2,
+            "$_DFF_PP0_": 50,
+            "$_NAND_": 14,
+            "$_NOR_": 14,
+            "$_OR_": 1,
+            "$_XNOR_": 17,
+            "$_XOR_": 15,
+            "pmu": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         122,
+         "num_wire_bits":     169,
+         "num_pub_wires":     59,
+         "num_pub_wire_bits": 106,
+         "num_ports":         9,
+         "num_port_bits":     56,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         131,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 17,
+            "$_AND_": 2,
+            "$_DFF_PP0_": 50,
+            "$_NAND_": 14,
+            "$_NOR_": 14,
+            "$_OR_": 1,
+            "$_XNOR_": 17,
+            "$_XOR_": 15,
+            "pmu": 1
+         }
+      }
+}
+
+96. Printing statistics.
+
+=== rca ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      122 wires
+      169 wire bits
+       59 public wires
+      106 public wire bits
+        9 ports
+       56 port bits
+      131 cells
+       17   $_ANDNOT_
+        2   $_AND_
+       50   $_DFF_PP0_
+       14   $_NAND_
+       14   $_NOR_
+        1   $_OR_
+       17   $_XNOR_
+       15   $_XOR_
+        1   pmu
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_DFF_PP0_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type \pmu is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+97. Executing TECHMAP pass (map to technology primitives).
+
+97.1. Executing Verilog-2005 frontend: /foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+verilog frontend filename /foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+97.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+98. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+99. Executing TECHMAP pass (map to technology primitives).
+
+99.1. Executing Verilog-2005 frontend: /foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+verilog frontend filename /foss/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+99.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+100. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+101. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+101.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\rca':
+  mapped 50 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+{
+   "creator": "Yosys 0.60 (git sha1 5bafeb77d, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/tmp/d05321c9a505410d820173d9770f4316.lib ",
+   "modules": {
+      "\\rca": {
+         "num_wires":         172,
+         "num_wire_bits":     219,
+         "num_pub_wires":     59,
+         "num_pub_wire_bits": 106,
+         "num_ports":         9,
+         "num_port_bits":     56,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         181,
+         "num_submodules":       0,
+         "area":              1313.760000,
+         "sequential_area":    1313.760000,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 17,
+            "$_AND_": 2,
+            "$_NAND_": 14,
+            "$_NOR_": 14,
+            "$_NOT_": 50,
+            "$_OR_": 1,
+            "$_XNOR_": 17,
+            "$_XOR_": 15,
+            "pmu": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 50
+         }
+      }
+   },
+      "design": {
+         "num_wires":         172,
+         "num_wire_bits":     219,
+         "num_pub_wires":     59,
+         "num_pub_wire_bits": 106,
+         "num_ports":         9,
+         "num_port_bits":     56,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         181,
+         "num_submodules":       0,
+         "area":              1313.760000,
+         "sequential_area":    1313.760000,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 17,
+            "$_AND_": 2,
+            "$_NAND_": 14,
+            "$_NOR_": 14,
+            "$_NOT_": 50,
+            "$_OR_": 1,
+            "$_XNOR_": 17,
+            "$_XOR_": 15,
+            "pmu": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 50
+         }
+      }
+}
+
+102. Printing statistics.
+
+=== rca ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      172        - wires
+      219        - wire bits
+       59        - public wires
+      106        - public wire bits
+        9        - ports
+       56        - port bits
+      181  1313.76 cells
+       17        -   $_ANDNOT_
+        2        -   $_AND_
+       14        -   $_NAND_
+       14        -   $_NOR_
+       50        -   $_NOT_
+        1        -   $_OR_
+       17        -   $_XNOR_
+       15        -   $_XOR_
+        1        -   pmu
+       50  1313.76   sky130_fd_sc_hd__dfrtp_2
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type \pmu is unknown!
+
+   Chip area for module '\rca': 1313.760000
+     of which used for sequential elements: 1313.760000 (100.00%)
+
+[INFO] Using generated ABC script '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/93-yosys-synthesis/AREA_0.abc'…
+
+103. Executing ABC pass (technology mapping using ABC).
+
+103.1. Extracting gate netlist of module `\rca' to `/tmp/yosys-abc-bm2ASm/input.blif'..
+
+103.1.1. Executed ABC.
+Extracted 130 gates and 164 wires to a netlist network with 34 inputs and 67 outputs.
+Running ABC script: /tmp/yosys-abc-bm2ASm/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Dec 21 2025 19:49:10)
+ABC: abc 01> empty
+ABC: abc 01> source /tmp/yosys-abc-bm2ASm/abc.script
+ABC: + read_blif /tmp/yosys-abc-bm2ASm/input.blif 
+ABC: + read_lib -w /foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/tmp/d05321c9a505410d820173d9770f4316.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.05 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/tmp/d05321c9a505410d820173d9770f4316.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.06 sec
+ABC: Memory =    9.54 MB. Time =     0.06 sec
+ABC: Warning: Detected 2 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/93-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/93-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    130 ( 38.5 %)   Cap = 19.3 ff (  4.8 %)   Area =      912.12 ( 61.5 %)   Delay =  4066.71 ps  ( 14.6 %)               
+ABC: Path  0 --       1 : 0    2 pi                        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   6.1 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     103 : 2    2 sky130_fd_sc_hd__or2_2    A =   6.26  Df = 290.6 -195.2 ps  S =  67.4 ps  Cin =  1.5 ff  Cout =   7.0 ff  Cmax = 299.4 ff  G =  468  
+ABC: Path  2 --     107 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df = 532.6 -284.1 ps  S =  75.6 ps  Cin =  2.0 ff  Cout =  11.5 ff  Cmax = 288.4 ff  G =  544  
+ABC: Path  3 --     112 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df = 748.5 -342.1 ps  S =  75.6 ps  Cin =  2.0 ff  Cout =  11.5 ff  Cmax = 288.4 ff  G =  544  
+ABC: Path  4 --     120 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df = 963.5 -401.7 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path  5 --     125 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =1199.7 -480.1 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path  6 --     130 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =1435.8 -558.5 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path  7 --     135 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =1671.9 -636.9 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path  8 --     140 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =1908.0 -715.3 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path  9 --     145 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =2144.1 -793.6 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path 10 --     150 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =2380.2 -872.0 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path 11 --     155 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =2616.4 -950.4 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path 12 --     160 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =2852.5-1028.8 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path 13 --     165 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =3088.6-1107.2 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path 14 --     170 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =3324.7-1185.6 ps  S =  72.7 ps  Cin =  2.0 ff  Cout =  10.9 ff  Cmax = 288.4 ff  G =  522  
+ABC: Path 15 --     175 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =3567.9-1261.2 ps  S =  85.3 ps  Cin =  2.0 ff  Cout =  13.5 ff  Cmax = 288.4 ff  G =  641  
+ABC: Path 16 --     178 : 3    2 sky130_fd_sc_hd__a21boi_2 A =  11.26  Df =3779.7-1389.5 ps  S = 193.8 ps  Cin =  3.6 ff  Cout =  13.6 ff  Cmax = 129.1 ff  G =  363  
+ABC: Path 17 --     182 : 2    1 sky130_fd_sc_hd__xnor2_2  A =  16.27  Df =4066.7-1279.7 ps  S = 453.8 ps  Cin =  8.5 ff  Cout =  33.4 ff  Cmax = 121.8 ff  G =  394  
+ABC: Start-point = pi0 (\genblk1[0].fa_inst.b).  End-point = po16 (\genblk1[15].fa_inst.s).
+ABC: netlist                       : i/o =   34/   67  lat =    0  nd =   130  edge =    226  area =912.21  delay =17.00  lev = 17
+ABC: + write_blif /tmp/yosys-abc-bm2ASm/output.blif 
+ABC:                                                                                
+
+103.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       50
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       30
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:       16
+ABC RESULTS:        internal signals:       63
+ABC RESULTS:           input signals:       34
+ABC RESULTS:          output signals:       67
+Removing temp directory.
+Removing global temp directory.
+
+104. Executing SETUNDEF pass (replace undef values with defined constants).
+
+105. Executing HILOMAP pass (mapping to constant drivers).
+
+106. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+107. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rca..
+Removed 0 unused cells and 164 unused wires.
+<suppressed ~1 debug messages>
+
+108. Executing INSBUF pass (insert buffer cells for connected wires).
+
+109. Executing CHECK pass (checking for obvious problems).
+Checking module rca...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.60 (git sha1 5bafeb77d, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/tmp/d05321c9a505410d820173d9770f4316.lib ",
+   "modules": {
+      "\\rca": {
+         "num_wires":         184,
+         "num_wire_bits":     231,
+         "num_pub_wires":     59,
+         "num_pub_wire_bits": 106,
+         "num_ports":         9,
+         "num_port_bits":     56,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         193,
+         "num_submodules":       0,
+         "area":              2270.928000,
+         "sequential_area":    1313.760000,
+         "num_cells_by_type": {
+            "pmu": 1,
+            "sky130_fd_sc_hd__a21bo_2": 14,
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__and2_2": 1,
+            "sky130_fd_sc_hd__conb_1": 12,
+            "sky130_fd_sc_hd__dfrtp_2": 50,
+            "sky130_fd_sc_hd__inv_2": 50,
+            "sky130_fd_sc_hd__nand2_2": 30,
+            "sky130_fd_sc_hd__nor2_2": 2,
+            "sky130_fd_sc_hd__o21bai_2": 1,
+            "sky130_fd_sc_hd__or2_2": 15,
+            "sky130_fd_sc_hd__xnor2_2": 16
+         }
+      }
+   },
+      "design": {
+         "num_wires":         184,
+         "num_wire_bits":     231,
+         "num_pub_wires":     59,
+         "num_pub_wire_bits": 106,
+         "num_ports":         9,
+         "num_port_bits":     56,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         193,
+         "num_submodules":       0,
+         "area":              2270.928000,
+         "sequential_area":    1313.760000,
+         "num_cells_by_type": {
+            "pmu": 1,
+            "sky130_fd_sc_hd__a21bo_2": 14,
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__and2_2": 1,
+            "sky130_fd_sc_hd__conb_1": 12,
+            "sky130_fd_sc_hd__dfrtp_2": 50,
+            "sky130_fd_sc_hd__inv_2": 50,
+            "sky130_fd_sc_hd__nand2_2": 30,
+            "sky130_fd_sc_hd__nor2_2": 2,
+            "sky130_fd_sc_hd__o21bai_2": 1,
+            "sky130_fd_sc_hd__or2_2": 15,
+            "sky130_fd_sc_hd__xnor2_2": 16
+         }
+      }
+}
+
+110. Printing statistics.
+
+=== rca ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      184        - wires
+      231        - wire bits
+       59        - public wires
+      106        - public wire bits
+        9        - ports
+       56        - port bits
+      193 2.27E+03 cells
+        1        -   pmu
+       14  140.134   sky130_fd_sc_hd__a21bo_2
+        1   11.261   sky130_fd_sc_hd__a21boi_2
+        1    7.507   sky130_fd_sc_hd__and2_2
+       12   45.043   sky130_fd_sc_hd__conb_1
+       50  1313.76   sky130_fd_sc_hd__dfrtp_2
+       50   187.68   sky130_fd_sc_hd__inv_2
+       30   187.68   sky130_fd_sc_hd__nand2_2
+        2   12.512   sky130_fd_sc_hd__nor2_2
+        1   11.261   sky130_fd_sc_hd__o21bai_2
+       15    93.84   sky130_fd_sc_hd__or2_2
+       16   260.25   sky130_fd_sc_hd__xnor2_2
+
+   Area for cell type \pmu is unknown!
+
+   Chip area for module '\rca': 2270.928000
+     of which used for sequential elements: 1313.760000 (57.85%)
+
+111. Executing Verilog backend.
+Dumping module `\rca'.
+
+112. Executing JSON backend.

@@ -1,0 +1,4193 @@
+{
+  "creator": "Yosys 0.60 (git sha1 5bafeb77d, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+  "modules": {
+    "pmu": {
+      "attributes": {
+        "hdlname": "pmu",
+        "top": "00000000000000000000000000000001",
+        "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:7.1-49.10"
+      },
+      "ports": {
+        "VPWR": {
+          "direction": "inout",
+          "bits": [ 2 ]
+        },
+        "VGND": {
+          "direction": "inout",
+          "bits": [ 3 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "se": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "path": {
+          "direction": "input",
+          "bits": [ 7, 8, 9, 10, 11, 12, 13, 14 ]
+        },
+        "path_sel": {
+          "direction": "input",
+          "bits": [ 15, 16, 17 ]
+        },
+        "delay_sel": {
+          "direction": "input",
+          "bits": [ 18, 19, 20 ]
+        },
+        "tdi": {
+          "direction": "input",
+          "bits": [ 21 ]
+        },
+        "tdo": {
+          "direction": "output",
+          "bits": [ 22 ]
+        }
+      },
+      "cells": {
+        "$procdff$10": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:36.2-47.5"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 5 ],
+            "CLK": [ 4 ],
+            "D": [ 23 ],
+            "Q": [ 24 ]
+          }
+        },
+        "$procdff$13": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:36.2-47.5"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 5 ],
+            "CLK": [ 4 ],
+            "D": [ 25 ],
+            "Q": [ 22 ]
+          }
+        },
+        "$procdff$7": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:36.2-47.5"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 5 ],
+            "CLK": [ 4 ],
+            "D": [ 26 ],
+            "Q": [ 27 ]
+          }
+        },
+        "$shiftx$/foss/designs/pmu_design/pmu/1-librelane/pmu.v:24$1": {
+          "hide_name": 1,
+          "type": "$shiftx",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:24.24-24.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14 ],
+            "B": [ 15, 16, 17 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$ternary$/foss/designs/pmu_design/pmu/1-librelane/pmu.v:45$4": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:45.17-45.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 28 ],
+            "B": [ 21 ],
+            "S": [ 6 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$xor$/foss/designs/pmu_design/pmu/1-librelane/pmu.v:32$2": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:32.21-32.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 24 ],
+            "Y": [ 28 ]
+          }
+        },
+        "dc_inst.x1.x1": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x1",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131.1-134.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 26 ],
+            "X": [ 29 ]
+          }
+        },
+        "dc_inst.x1.x10": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x10",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194.1-197.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 30 ],
+            "X": [ 31 ]
+          }
+        },
+        "dc_inst.x1.x11": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x11",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201.1-204.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 31 ],
+            "X": [ 32 ]
+          }
+        },
+        "dc_inst.x1.x12": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x12",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208.1-211.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 32 ],
+            "X": [ 33 ]
+          }
+        },
+        "dc_inst.x1.x13": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x13",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215.1-218.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "X": [ 34 ]
+          }
+        },
+        "dc_inst.x1.x14": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x14",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222.1-225.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "X": [ 35 ]
+          }
+        },
+        "dc_inst.x1.x15": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x15",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229.1-232.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 35 ],
+            "X": [ 36 ]
+          }
+        },
+        "dc_inst.x1.x16": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x16",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236.1-239.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 36 ],
+            "X": [ 37 ]
+          }
+        },
+        "dc_inst.x1.x17": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x17",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243.1-246.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 37 ],
+            "X": [ 38 ]
+          }
+        },
+        "dc_inst.x1.x18": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x18",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250.1-253.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 38 ],
+            "X": [ 39 ]
+          }
+        },
+        "dc_inst.x1.x19": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x19",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257.1-260.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 39 ],
+            "X": [ 40 ]
+          }
+        },
+        "dc_inst.x1.x2": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x2",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138.1-141.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 29 ],
+            "X": [ 41 ]
+          }
+        },
+        "dc_inst.x1.x20": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_2",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x20",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264.1-267.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 40 ],
+            "X": [ 42 ]
+          }
+        },
+        "dc_inst.x1.x3": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x3",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145.1-148.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 41 ],
+            "X": [ 43 ]
+          }
+        },
+        "dc_inst.x1.x4": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x4",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152.1-155.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 43 ],
+            "X": [ 44 ]
+          }
+        },
+        "dc_inst.x1.x5": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x5",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159.1-162.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 44 ],
+            "X": [ 45 ]
+          }
+        },
+        "dc_inst.x1.x6": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x6",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166.1-169.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 45 ],
+            "X": [ 46 ]
+          }
+        },
+        "dc_inst.x1.x7": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x7",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173.1-176.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 46 ],
+            "X": [ 47 ]
+          }
+        },
+        "dc_inst.x1.x8": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x8",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180.1-183.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 47 ],
+            "X": [ 48 ]
+          }
+        },
+        "dc_inst.x1.x9": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x1 x9",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187.1-190.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 48 ],
+            "X": [ 30 ]
+          }
+        },
+        "dc_inst.x10": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__mux2_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x10",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:85.1-90.2"
+          },
+          "port_directions": {
+            "A0": "input",
+            "A1": "input",
+            "S": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A0": [ 49 ],
+            "A1": [ 50 ],
+            "S": [ 20 ],
+            "X": [ 23 ]
+          }
+        },
+        "dc_inst.x2.x1": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x1",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131.1-134.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 42 ],
+            "X": [ 51 ]
+          }
+        },
+        "dc_inst.x2.x10": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x10",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194.1-197.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 52 ],
+            "X": [ 53 ]
+          }
+        },
+        "dc_inst.x2.x11": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x11",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201.1-204.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 53 ],
+            "X": [ 54 ]
+          }
+        },
+        "dc_inst.x2.x12": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x12",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208.1-211.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 54 ],
+            "X": [ 55 ]
+          }
+        },
+        "dc_inst.x2.x13": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x13",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215.1-218.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 55 ],
+            "X": [ 56 ]
+          }
+        },
+        "dc_inst.x2.x14": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x14",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222.1-225.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 56 ],
+            "X": [ 57 ]
+          }
+        },
+        "dc_inst.x2.x15": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x15",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229.1-232.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 57 ],
+            "X": [ 58 ]
+          }
+        },
+        "dc_inst.x2.x16": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x16",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236.1-239.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 58 ],
+            "X": [ 59 ]
+          }
+        },
+        "dc_inst.x2.x17": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x17",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243.1-246.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 59 ],
+            "X": [ 60 ]
+          }
+        },
+        "dc_inst.x2.x18": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x18",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250.1-253.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 60 ],
+            "X": [ 61 ]
+          }
+        },
+        "dc_inst.x2.x19": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x19",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257.1-260.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 61 ],
+            "X": [ 62 ]
+          }
+        },
+        "dc_inst.x2.x2": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x2",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138.1-141.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 51 ],
+            "X": [ 63 ]
+          }
+        },
+        "dc_inst.x2.x20": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_2",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x20",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264.1-267.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 62 ],
+            "X": [ 64 ]
+          }
+        },
+        "dc_inst.x2.x3": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x3",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145.1-148.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 63 ],
+            "X": [ 65 ]
+          }
+        },
+        "dc_inst.x2.x4": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x4",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152.1-155.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 65 ],
+            "X": [ 66 ]
+          }
+        },
+        "dc_inst.x2.x5": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x5",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159.1-162.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 66 ],
+            "X": [ 67 ]
+          }
+        },
+        "dc_inst.x2.x6": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x6",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166.1-169.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 67 ],
+            "X": [ 68 ]
+          }
+        },
+        "dc_inst.x2.x7": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x7",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173.1-176.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 68 ],
+            "X": [ 69 ]
+          }
+        },
+        "dc_inst.x2.x8": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x8",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180.1-183.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 69 ],
+            "X": [ 70 ]
+          }
+        },
+        "dc_inst.x2.x9": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x2 x9",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187.1-190.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 70 ],
+            "X": [ 52 ]
+          }
+        },
+        "dc_inst.x3.x1": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x1",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131.1-134.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 64 ],
+            "X": [ 71 ]
+          }
+        },
+        "dc_inst.x3.x10": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x10",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194.1-197.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 72 ],
+            "X": [ 73 ]
+          }
+        },
+        "dc_inst.x3.x11": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x11",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201.1-204.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 73 ],
+            "X": [ 74 ]
+          }
+        },
+        "dc_inst.x3.x12": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x12",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208.1-211.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 74 ],
+            "X": [ 75 ]
+          }
+        },
+        "dc_inst.x3.x13": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x13",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215.1-218.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 75 ],
+            "X": [ 76 ]
+          }
+        },
+        "dc_inst.x3.x14": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x14",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222.1-225.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 76 ],
+            "X": [ 77 ]
+          }
+        },
+        "dc_inst.x3.x15": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x15",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229.1-232.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 77 ],
+            "X": [ 78 ]
+          }
+        },
+        "dc_inst.x3.x16": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x16",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236.1-239.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 78 ],
+            "X": [ 79 ]
+          }
+        },
+        "dc_inst.x3.x17": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x17",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243.1-246.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 79 ],
+            "X": [ 80 ]
+          }
+        },
+        "dc_inst.x3.x18": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x18",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250.1-253.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 80 ],
+            "X": [ 81 ]
+          }
+        },
+        "dc_inst.x3.x19": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x19",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257.1-260.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 81 ],
+            "X": [ 82 ]
+          }
+        },
+        "dc_inst.x3.x2": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x2",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138.1-141.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 71 ],
+            "X": [ 83 ]
+          }
+        },
+        "dc_inst.x3.x20": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_2",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x20",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264.1-267.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 82 ],
+            "X": [ 84 ]
+          }
+        },
+        "dc_inst.x3.x3": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x3",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145.1-148.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 83 ],
+            "X": [ 85 ]
+          }
+        },
+        "dc_inst.x3.x4": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x4",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152.1-155.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 85 ],
+            "X": [ 86 ]
+          }
+        },
+        "dc_inst.x3.x5": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x5",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159.1-162.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 86 ],
+            "X": [ 87 ]
+          }
+        },
+        "dc_inst.x3.x6": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x6",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166.1-169.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 87 ],
+            "X": [ 88 ]
+          }
+        },
+        "dc_inst.x3.x7": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x7",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173.1-176.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 88 ],
+            "X": [ 89 ]
+          }
+        },
+        "dc_inst.x3.x8": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x8",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180.1-183.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 89 ],
+            "X": [ 90 ]
+          }
+        },
+        "dc_inst.x3.x9": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x3 x9",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187.1-190.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 90 ],
+            "X": [ 72 ]
+          }
+        },
+        "dc_inst.x4.x1": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x1",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131.1-134.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 84 ],
+            "X": [ 91 ]
+          }
+        },
+        "dc_inst.x4.x10": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x10",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194.1-197.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 92 ],
+            "X": [ 93 ]
+          }
+        },
+        "dc_inst.x4.x11": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x11",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201.1-204.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 93 ],
+            "X": [ 94 ]
+          }
+        },
+        "dc_inst.x4.x12": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x12",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208.1-211.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 94 ],
+            "X": [ 95 ]
+          }
+        },
+        "dc_inst.x4.x13": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x13",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215.1-218.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 95 ],
+            "X": [ 96 ]
+          }
+        },
+        "dc_inst.x4.x14": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x14",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222.1-225.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 96 ],
+            "X": [ 97 ]
+          }
+        },
+        "dc_inst.x4.x15": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x15",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229.1-232.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 97 ],
+            "X": [ 98 ]
+          }
+        },
+        "dc_inst.x4.x16": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x16",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236.1-239.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 98 ],
+            "X": [ 99 ]
+          }
+        },
+        "dc_inst.x4.x17": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x17",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243.1-246.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 99 ],
+            "X": [ 100 ]
+          }
+        },
+        "dc_inst.x4.x18": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x18",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250.1-253.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 100 ],
+            "X": [ 101 ]
+          }
+        },
+        "dc_inst.x4.x19": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x19",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257.1-260.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 101 ],
+            "X": [ 102 ]
+          }
+        },
+        "dc_inst.x4.x2": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x2",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138.1-141.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 91 ],
+            "X": [ 103 ]
+          }
+        },
+        "dc_inst.x4.x20": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_2",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x20",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264.1-267.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 102 ],
+            "X": [ 104 ]
+          }
+        },
+        "dc_inst.x4.x3": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x3",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145.1-148.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 103 ],
+            "X": [ 105 ]
+          }
+        },
+        "dc_inst.x4.x4": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x4",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152.1-155.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 105 ],
+            "X": [ 106 ]
+          }
+        },
+        "dc_inst.x4.x5": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x5",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159.1-162.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 106 ],
+            "X": [ 107 ]
+          }
+        },
+        "dc_inst.x4.x6": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x6",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166.1-169.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 107 ],
+            "X": [ 108 ]
+          }
+        },
+        "dc_inst.x4.x7": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x7",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173.1-176.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 108 ],
+            "X": [ 109 ]
+          }
+        },
+        "dc_inst.x4.x8": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x8",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180.1-183.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 109 ],
+            "X": [ 110 ]
+          }
+        },
+        "dc_inst.x4.x9": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x4 x9",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187.1-190.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "X": [ 92 ]
+          }
+        },
+        "dc_inst.x5.x1": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x1",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131.1-134.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 104 ],
+            "X": [ 111 ]
+          }
+        },
+        "dc_inst.x5.x10": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x10",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194.1-197.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 112 ],
+            "X": [ 113 ]
+          }
+        },
+        "dc_inst.x5.x11": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x11",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201.1-204.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 113 ],
+            "X": [ 114 ]
+          }
+        },
+        "dc_inst.x5.x12": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x12",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208.1-211.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 114 ],
+            "X": [ 115 ]
+          }
+        },
+        "dc_inst.x5.x13": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x13",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215.1-218.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 115 ],
+            "X": [ 116 ]
+          }
+        },
+        "dc_inst.x5.x14": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x14",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222.1-225.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 116 ],
+            "X": [ 117 ]
+          }
+        },
+        "dc_inst.x5.x15": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x15",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229.1-232.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 117 ],
+            "X": [ 118 ]
+          }
+        },
+        "dc_inst.x5.x16": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x16",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236.1-239.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 118 ],
+            "X": [ 119 ]
+          }
+        },
+        "dc_inst.x5.x17": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x17",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243.1-246.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 119 ],
+            "X": [ 120 ]
+          }
+        },
+        "dc_inst.x5.x18": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x18",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250.1-253.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 120 ],
+            "X": [ 121 ]
+          }
+        },
+        "dc_inst.x5.x19": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x19",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257.1-260.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 121 ],
+            "X": [ 122 ]
+          }
+        },
+        "dc_inst.x5.x2": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x2",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138.1-141.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 111 ],
+            "X": [ 123 ]
+          }
+        },
+        "dc_inst.x5.x20": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_2",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x20",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264.1-267.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 122 ],
+            "X": [ 124 ]
+          }
+        },
+        "dc_inst.x5.x3": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x3",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145.1-148.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 123 ],
+            "X": [ 125 ]
+          }
+        },
+        "dc_inst.x5.x4": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x4",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152.1-155.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 125 ],
+            "X": [ 126 ]
+          }
+        },
+        "dc_inst.x5.x5": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x5",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159.1-162.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 126 ],
+            "X": [ 127 ]
+          }
+        },
+        "dc_inst.x5.x6": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x6",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166.1-169.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 127 ],
+            "X": [ 128 ]
+          }
+        },
+        "dc_inst.x5.x7": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x7",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173.1-176.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 128 ],
+            "X": [ 129 ]
+          }
+        },
+        "dc_inst.x5.x8": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x8",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180.1-183.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 129 ],
+            "X": [ 130 ]
+          }
+        },
+        "dc_inst.x5.x9": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x5 x9",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187.1-190.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 130 ],
+            "X": [ 112 ]
+          }
+        },
+        "dc_inst.x6.x1": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x1",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:131.1-134.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 124 ],
+            "X": [ 131 ]
+          }
+        },
+        "dc_inst.x6.x10": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x10",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:194.1-197.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 132 ],
+            "X": [ 133 ]
+          }
+        },
+        "dc_inst.x6.x11": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x11",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:201.1-204.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 133 ],
+            "X": [ 134 ]
+          }
+        },
+        "dc_inst.x6.x12": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x12",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:208.1-211.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 134 ],
+            "X": [ 135 ]
+          }
+        },
+        "dc_inst.x6.x13": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x13",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:215.1-218.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 135 ],
+            "X": [ 136 ]
+          }
+        },
+        "dc_inst.x6.x14": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x14",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:222.1-225.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 136 ],
+            "X": [ 137 ]
+          }
+        },
+        "dc_inst.x6.x15": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x15",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:229.1-232.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 137 ],
+            "X": [ 138 ]
+          }
+        },
+        "dc_inst.x6.x16": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x16",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:236.1-239.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 138 ],
+            "X": [ 139 ]
+          }
+        },
+        "dc_inst.x6.x17": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x17",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:243.1-246.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 139 ],
+            "X": [ 140 ]
+          }
+        },
+        "dc_inst.x6.x18": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x18",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:250.1-253.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 140 ],
+            "X": [ 141 ]
+          }
+        },
+        "dc_inst.x6.x19": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x19",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:257.1-260.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 141 ],
+            "X": [ 142 ]
+          }
+        },
+        "dc_inst.x6.x2": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x2",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:138.1-141.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 131 ],
+            "X": [ 143 ]
+          }
+        },
+        "dc_inst.x6.x20": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_2",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x20",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:264.1-267.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 142 ],
+            "X": [ 144 ]
+          }
+        },
+        "dc_inst.x6.x3": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x3",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:145.1-148.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 143 ],
+            "X": [ 145 ]
+          }
+        },
+        "dc_inst.x6.x4": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x4",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:152.1-155.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 145 ],
+            "X": [ 146 ]
+          }
+        },
+        "dc_inst.x6.x5": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x5",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:159.1-162.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 146 ],
+            "X": [ 147 ]
+          }
+        },
+        "dc_inst.x6.x6": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x6",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:166.1-169.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 147 ],
+            "X": [ 148 ]
+          }
+        },
+        "dc_inst.x6.x7": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x7",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:173.1-176.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 148 ],
+            "X": [ 149 ]
+          }
+        },
+        "dc_inst.x6.x8": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x8",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:180.1-183.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 149 ],
+            "X": [ 150 ]
+          }
+        },
+        "dc_inst.x6.x9": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x6 x9",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:187.1-190.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 150 ],
+            "X": [ 132 ]
+          }
+        },
+        "dc_inst.x7.x1": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x1",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:301.1-304.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 144 ],
+            "X": [ 151 ]
+          }
+        },
+        "dc_inst.x7.x10": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x10",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:364.1-367.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 152 ],
+            "X": [ 153 ]
+          }
+        },
+        "dc_inst.x7.x11": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x11",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:371.1-374.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 153 ],
+            "X": [ 154 ]
+          }
+        },
+        "dc_inst.x7.x12": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x12",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:378.1-381.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 154 ],
+            "X": [ 155 ]
+          }
+        },
+        "dc_inst.x7.x13": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x13",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:385.1-388.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 155 ],
+            "X": [ 156 ]
+          }
+        },
+        "dc_inst.x7.x14": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x14",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:392.1-395.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 156 ],
+            "X": [ 157 ]
+          }
+        },
+        "dc_inst.x7.x15": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x15",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:399.1-402.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 157 ],
+            "X": [ 158 ]
+          }
+        },
+        "dc_inst.x7.x16": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x16",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:406.1-409.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 158 ],
+            "X": [ 159 ]
+          }
+        },
+        "dc_inst.x7.x17": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x17",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:413.1-416.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 159 ],
+            "X": [ 160 ]
+          }
+        },
+        "dc_inst.x7.x18": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x18",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:420.1-423.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 160 ],
+            "X": [ 161 ]
+          }
+        },
+        "dc_inst.x7.x19": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x19",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:427.1-430.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 161 ],
+            "X": [ 162 ]
+          }
+        },
+        "dc_inst.x7.x2": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x2",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:308.1-311.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 151 ],
+            "X": [ 163 ]
+          }
+        },
+        "dc_inst.x7.x20": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x20",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:434.1-437.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 162 ],
+            "X": [ 164 ]
+          }
+        },
+        "dc_inst.x7.x3": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x3",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:315.1-318.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 163 ],
+            "X": [ 165 ]
+          }
+        },
+        "dc_inst.x7.x4": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x4",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:322.1-325.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 165 ],
+            "X": [ 166 ]
+          }
+        },
+        "dc_inst.x7.x5": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x5",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:329.1-332.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 166 ],
+            "X": [ 167 ]
+          }
+        },
+        "dc_inst.x7.x6": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x6",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:336.1-339.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 167 ],
+            "X": [ 168 ]
+          }
+        },
+        "dc_inst.x7.x7": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x7",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:343.1-346.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 168 ],
+            "X": [ 169 ]
+          }
+        },
+        "dc_inst.x7.x8": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x8",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:350.1-353.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 169 ],
+            "X": [ 170 ]
+          }
+        },
+        "dc_inst.x7.x9": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__buf_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x7 x9",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:357.1-360.2"
+          },
+          "port_directions": {
+            "A": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A": [ 170 ],
+            "X": [ 152 ]
+          }
+        },
+        "dc_inst.x8": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__mux4_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x8",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:61.1-69.2"
+          },
+          "port_directions": {
+            "A0": "input",
+            "A1": "input",
+            "A2": "input",
+            "A3": "input",
+            "S0": "input",
+            "S1": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A0": [ 26 ],
+            "A1": [ 42 ],
+            "A2": [ 64 ],
+            "A3": [ 84 ],
+            "S0": [ 18 ],
+            "S1": [ 19 ],
+            "X": [ 49 ]
+          }
+        },
+        "dc_inst.x9": {
+          "hide_name": 0,
+          "type": "sky130_fd_sc_hd__mux4_1",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "dc_inst x9",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:73.1-81.2"
+          },
+          "port_directions": {
+            "A0": "input",
+            "A1": "input",
+            "A2": "input",
+            "A3": "input",
+            "S0": "input",
+            "S1": "input",
+            "X": "output"
+          },
+          "connections": {
+            "A0": [ 104 ],
+            "A1": [ 124 ],
+            "A2": [ 144 ],
+            "A3": [ 164 ],
+            "S0": [ 18 ],
+            "S1": [ 19 ],
+            "X": [ 50 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\monitor_q[0:0]": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:36.2-47.5"
+          }
+        },
+        "VGND": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:10.11-10.15"
+          }
+        },
+        "VPWR": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:9.11-9.15"
+          }
+        },
+        "capture_d": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:22.17-22.26"
+          }
+        },
+        "capture_q": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:21.16-21.25"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:12.13-12.16"
+          }
+        },
+        "dc_inst.in": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "hdlname": "dc_inst in",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:5.14-5.16"
+          }
+        },
+        "dc_inst.net1": {
+          "hide_name": 0,
+          "bits": [ 42 ],
+          "attributes": {
+            "hdlname": "dc_inst net1",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:8.6-8.10"
+          }
+        },
+        "dc_inst.net2": {
+          "hide_name": 0,
+          "bits": [ 64 ],
+          "attributes": {
+            "hdlname": "dc_inst net2",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:9.6-9.10"
+          }
+        },
+        "dc_inst.net3": {
+          "hide_name": 0,
+          "bits": [ 84 ],
+          "attributes": {
+            "hdlname": "dc_inst net3",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:10.6-10.10"
+          }
+        },
+        "dc_inst.net4": {
+          "hide_name": 0,
+          "bits": [ 104 ],
+          "attributes": {
+            "hdlname": "dc_inst net4",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:11.6-11.10"
+          }
+        },
+        "dc_inst.net5": {
+          "hide_name": 0,
+          "bits": [ 124 ],
+          "attributes": {
+            "hdlname": "dc_inst net5",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:12.6-12.10"
+          }
+        },
+        "dc_inst.net6": {
+          "hide_name": 0,
+          "bits": [ 144 ],
+          "attributes": {
+            "hdlname": "dc_inst net6",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:13.6-13.10"
+          }
+        },
+        "dc_inst.net7": {
+          "hide_name": 0,
+          "bits": [ 164 ],
+          "attributes": {
+            "hdlname": "dc_inst net7",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:14.6-14.10"
+          }
+        },
+        "dc_inst.net8": {
+          "hide_name": 0,
+          "bits": [ 49 ],
+          "attributes": {
+            "hdlname": "dc_inst net8",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:15.6-15.10"
+          }
+        },
+        "dc_inst.net9": {
+          "hide_name": 0,
+          "bits": [ 50 ],
+          "attributes": {
+            "hdlname": "dc_inst net9",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:16.6-16.10"
+          }
+        },
+        "dc_inst.x1.net1": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net1",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:119.6-119.10"
+          }
+        },
+        "dc_inst.x1.net10": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net10",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:109.6-109.11"
+          }
+        },
+        "dc_inst.x1.net11": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net11",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:110.6-110.11"
+          }
+        },
+        "dc_inst.x1.net12": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net12",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:111.6-111.11"
+          }
+        },
+        "dc_inst.x1.net13": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net13",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:112.6-112.11"
+          }
+        },
+        "dc_inst.x1.net14": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net14",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:113.6-113.11"
+          }
+        },
+        "dc_inst.x1.net15": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net15",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:114.6-114.11"
+          }
+        },
+        "dc_inst.x1.net16": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net16",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:115.6-115.11"
+          }
+        },
+        "dc_inst.x1.net17": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net17",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:116.6-116.11"
+          }
+        },
+        "dc_inst.x1.net18": {
+          "hide_name": 0,
+          "bits": [ 39 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net18",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:117.6-117.11"
+          }
+        },
+        "dc_inst.x1.net19": {
+          "hide_name": 0,
+          "bits": [ 40 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net19",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:118.6-118.11"
+          }
+        },
+        "dc_inst.x1.net2": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net2",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:120.6-120.10"
+          }
+        },
+        "dc_inst.x1.net3": {
+          "hide_name": 0,
+          "bits": [ 41 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net3",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:121.6-121.10"
+          }
+        },
+        "dc_inst.x1.net4": {
+          "hide_name": 0,
+          "bits": [ 43 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net4",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:122.6-122.10"
+          }
+        },
+        "dc_inst.x1.net5": {
+          "hide_name": 0,
+          "bits": [ 44 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net5",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:123.6-123.10"
+          }
+        },
+        "dc_inst.x1.net6": {
+          "hide_name": 0,
+          "bits": [ 45 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net6",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:124.6-124.10"
+          }
+        },
+        "dc_inst.x1.net7": {
+          "hide_name": 0,
+          "bits": [ 46 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net7",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:125.6-125.10"
+          }
+        },
+        "dc_inst.x1.net8": {
+          "hide_name": 0,
+          "bits": [ 47 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net8",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:126.6-126.10"
+          }
+        },
+        "dc_inst.x1.net9": {
+          "hide_name": 0,
+          "bits": [ 48 ],
+          "attributes": {
+            "hdlname": "dc_inst x1 net9",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:127.6-127.10"
+          }
+        },
+        "dc_inst.x2.net1": {
+          "hide_name": 0,
+          "bits": [ 53 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net1",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:119.6-119.10"
+          }
+        },
+        "dc_inst.x2.net10": {
+          "hide_name": 0,
+          "bits": [ 52 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net10",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:109.6-109.11"
+          }
+        },
+        "dc_inst.x2.net11": {
+          "hide_name": 0,
+          "bits": [ 54 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net11",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:110.6-110.11"
+          }
+        },
+        "dc_inst.x2.net12": {
+          "hide_name": 0,
+          "bits": [ 55 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net12",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:111.6-111.11"
+          }
+        },
+        "dc_inst.x2.net13": {
+          "hide_name": 0,
+          "bits": [ 56 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net13",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:112.6-112.11"
+          }
+        },
+        "dc_inst.x2.net14": {
+          "hide_name": 0,
+          "bits": [ 57 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net14",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:113.6-113.11"
+          }
+        },
+        "dc_inst.x2.net15": {
+          "hide_name": 0,
+          "bits": [ 58 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net15",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:114.6-114.11"
+          }
+        },
+        "dc_inst.x2.net16": {
+          "hide_name": 0,
+          "bits": [ 59 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net16",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:115.6-115.11"
+          }
+        },
+        "dc_inst.x2.net17": {
+          "hide_name": 0,
+          "bits": [ 60 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net17",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:116.6-116.11"
+          }
+        },
+        "dc_inst.x2.net18": {
+          "hide_name": 0,
+          "bits": [ 61 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net18",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:117.6-117.11"
+          }
+        },
+        "dc_inst.x2.net19": {
+          "hide_name": 0,
+          "bits": [ 62 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net19",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:118.6-118.11"
+          }
+        },
+        "dc_inst.x2.net2": {
+          "hide_name": 0,
+          "bits": [ 51 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net2",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:120.6-120.10"
+          }
+        },
+        "dc_inst.x2.net3": {
+          "hide_name": 0,
+          "bits": [ 63 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net3",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:121.6-121.10"
+          }
+        },
+        "dc_inst.x2.net4": {
+          "hide_name": 0,
+          "bits": [ 65 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net4",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:122.6-122.10"
+          }
+        },
+        "dc_inst.x2.net5": {
+          "hide_name": 0,
+          "bits": [ 66 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net5",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:123.6-123.10"
+          }
+        },
+        "dc_inst.x2.net6": {
+          "hide_name": 0,
+          "bits": [ 67 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net6",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:124.6-124.10"
+          }
+        },
+        "dc_inst.x2.net7": {
+          "hide_name": 0,
+          "bits": [ 68 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net7",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:125.6-125.10"
+          }
+        },
+        "dc_inst.x2.net8": {
+          "hide_name": 0,
+          "bits": [ 69 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net8",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:126.6-126.10"
+          }
+        },
+        "dc_inst.x2.net9": {
+          "hide_name": 0,
+          "bits": [ 70 ],
+          "attributes": {
+            "hdlname": "dc_inst x2 net9",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:127.6-127.10"
+          }
+        },
+        "dc_inst.x3.net1": {
+          "hide_name": 0,
+          "bits": [ 73 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net1",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:119.6-119.10"
+          }
+        },
+        "dc_inst.x3.net10": {
+          "hide_name": 0,
+          "bits": [ 72 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net10",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:109.6-109.11"
+          }
+        },
+        "dc_inst.x3.net11": {
+          "hide_name": 0,
+          "bits": [ 74 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net11",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:110.6-110.11"
+          }
+        },
+        "dc_inst.x3.net12": {
+          "hide_name": 0,
+          "bits": [ 75 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net12",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:111.6-111.11"
+          }
+        },
+        "dc_inst.x3.net13": {
+          "hide_name": 0,
+          "bits": [ 76 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net13",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:112.6-112.11"
+          }
+        },
+        "dc_inst.x3.net14": {
+          "hide_name": 0,
+          "bits": [ 77 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net14",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:113.6-113.11"
+          }
+        },
+        "dc_inst.x3.net15": {
+          "hide_name": 0,
+          "bits": [ 78 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net15",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:114.6-114.11"
+          }
+        },
+        "dc_inst.x3.net16": {
+          "hide_name": 0,
+          "bits": [ 79 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net16",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:115.6-115.11"
+          }
+        },
+        "dc_inst.x3.net17": {
+          "hide_name": 0,
+          "bits": [ 80 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net17",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:116.6-116.11"
+          }
+        },
+        "dc_inst.x3.net18": {
+          "hide_name": 0,
+          "bits": [ 81 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net18",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:117.6-117.11"
+          }
+        },
+        "dc_inst.x3.net19": {
+          "hide_name": 0,
+          "bits": [ 82 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net19",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:118.6-118.11"
+          }
+        },
+        "dc_inst.x3.net2": {
+          "hide_name": 0,
+          "bits": [ 71 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net2",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:120.6-120.10"
+          }
+        },
+        "dc_inst.x3.net3": {
+          "hide_name": 0,
+          "bits": [ 83 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net3",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:121.6-121.10"
+          }
+        },
+        "dc_inst.x3.net4": {
+          "hide_name": 0,
+          "bits": [ 85 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net4",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:122.6-122.10"
+          }
+        },
+        "dc_inst.x3.net5": {
+          "hide_name": 0,
+          "bits": [ 86 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net5",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:123.6-123.10"
+          }
+        },
+        "dc_inst.x3.net6": {
+          "hide_name": 0,
+          "bits": [ 87 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net6",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:124.6-124.10"
+          }
+        },
+        "dc_inst.x3.net7": {
+          "hide_name": 0,
+          "bits": [ 88 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net7",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:125.6-125.10"
+          }
+        },
+        "dc_inst.x3.net8": {
+          "hide_name": 0,
+          "bits": [ 89 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net8",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:126.6-126.10"
+          }
+        },
+        "dc_inst.x3.net9": {
+          "hide_name": 0,
+          "bits": [ 90 ],
+          "attributes": {
+            "hdlname": "dc_inst x3 net9",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:127.6-127.10"
+          }
+        },
+        "dc_inst.x4.net1": {
+          "hide_name": 0,
+          "bits": [ 93 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net1",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:119.6-119.10"
+          }
+        },
+        "dc_inst.x4.net10": {
+          "hide_name": 0,
+          "bits": [ 92 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net10",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:109.6-109.11"
+          }
+        },
+        "dc_inst.x4.net11": {
+          "hide_name": 0,
+          "bits": [ 94 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net11",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:110.6-110.11"
+          }
+        },
+        "dc_inst.x4.net12": {
+          "hide_name": 0,
+          "bits": [ 95 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net12",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:111.6-111.11"
+          }
+        },
+        "dc_inst.x4.net13": {
+          "hide_name": 0,
+          "bits": [ 96 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net13",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:112.6-112.11"
+          }
+        },
+        "dc_inst.x4.net14": {
+          "hide_name": 0,
+          "bits": [ 97 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net14",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:113.6-113.11"
+          }
+        },
+        "dc_inst.x4.net15": {
+          "hide_name": 0,
+          "bits": [ 98 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net15",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:114.6-114.11"
+          }
+        },
+        "dc_inst.x4.net16": {
+          "hide_name": 0,
+          "bits": [ 99 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net16",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:115.6-115.11"
+          }
+        },
+        "dc_inst.x4.net17": {
+          "hide_name": 0,
+          "bits": [ 100 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net17",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:116.6-116.11"
+          }
+        },
+        "dc_inst.x4.net18": {
+          "hide_name": 0,
+          "bits": [ 101 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net18",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:117.6-117.11"
+          }
+        },
+        "dc_inst.x4.net19": {
+          "hide_name": 0,
+          "bits": [ 102 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net19",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:118.6-118.11"
+          }
+        },
+        "dc_inst.x4.net2": {
+          "hide_name": 0,
+          "bits": [ 91 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net2",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:120.6-120.10"
+          }
+        },
+        "dc_inst.x4.net3": {
+          "hide_name": 0,
+          "bits": [ 103 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net3",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:121.6-121.10"
+          }
+        },
+        "dc_inst.x4.net4": {
+          "hide_name": 0,
+          "bits": [ 105 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net4",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:122.6-122.10"
+          }
+        },
+        "dc_inst.x4.net5": {
+          "hide_name": 0,
+          "bits": [ 106 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net5",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:123.6-123.10"
+          }
+        },
+        "dc_inst.x4.net6": {
+          "hide_name": 0,
+          "bits": [ 107 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net6",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:124.6-124.10"
+          }
+        },
+        "dc_inst.x4.net7": {
+          "hide_name": 0,
+          "bits": [ 108 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net7",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:125.6-125.10"
+          }
+        },
+        "dc_inst.x4.net8": {
+          "hide_name": 0,
+          "bits": [ 109 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net8",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:126.6-126.10"
+          }
+        },
+        "dc_inst.x4.net9": {
+          "hide_name": 0,
+          "bits": [ 110 ],
+          "attributes": {
+            "hdlname": "dc_inst x4 net9",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:127.6-127.10"
+          }
+        },
+        "dc_inst.x5.net1": {
+          "hide_name": 0,
+          "bits": [ 113 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net1",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:119.6-119.10"
+          }
+        },
+        "dc_inst.x5.net10": {
+          "hide_name": 0,
+          "bits": [ 112 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net10",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:109.6-109.11"
+          }
+        },
+        "dc_inst.x5.net11": {
+          "hide_name": 0,
+          "bits": [ 114 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net11",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:110.6-110.11"
+          }
+        },
+        "dc_inst.x5.net12": {
+          "hide_name": 0,
+          "bits": [ 115 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net12",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:111.6-111.11"
+          }
+        },
+        "dc_inst.x5.net13": {
+          "hide_name": 0,
+          "bits": [ 116 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net13",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:112.6-112.11"
+          }
+        },
+        "dc_inst.x5.net14": {
+          "hide_name": 0,
+          "bits": [ 117 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net14",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:113.6-113.11"
+          }
+        },
+        "dc_inst.x5.net15": {
+          "hide_name": 0,
+          "bits": [ 118 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net15",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:114.6-114.11"
+          }
+        },
+        "dc_inst.x5.net16": {
+          "hide_name": 0,
+          "bits": [ 119 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net16",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:115.6-115.11"
+          }
+        },
+        "dc_inst.x5.net17": {
+          "hide_name": 0,
+          "bits": [ 120 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net17",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:116.6-116.11"
+          }
+        },
+        "dc_inst.x5.net18": {
+          "hide_name": 0,
+          "bits": [ 121 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net18",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:117.6-117.11"
+          }
+        },
+        "dc_inst.x5.net19": {
+          "hide_name": 0,
+          "bits": [ 122 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net19",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:118.6-118.11"
+          }
+        },
+        "dc_inst.x5.net2": {
+          "hide_name": 0,
+          "bits": [ 111 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net2",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:120.6-120.10"
+          }
+        },
+        "dc_inst.x5.net3": {
+          "hide_name": 0,
+          "bits": [ 123 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net3",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:121.6-121.10"
+          }
+        },
+        "dc_inst.x5.net4": {
+          "hide_name": 0,
+          "bits": [ 125 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net4",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:122.6-122.10"
+          }
+        },
+        "dc_inst.x5.net5": {
+          "hide_name": 0,
+          "bits": [ 126 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net5",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:123.6-123.10"
+          }
+        },
+        "dc_inst.x5.net6": {
+          "hide_name": 0,
+          "bits": [ 127 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net6",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:124.6-124.10"
+          }
+        },
+        "dc_inst.x5.net7": {
+          "hide_name": 0,
+          "bits": [ 128 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net7",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:125.6-125.10"
+          }
+        },
+        "dc_inst.x5.net8": {
+          "hide_name": 0,
+          "bits": [ 129 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net8",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:126.6-126.10"
+          }
+        },
+        "dc_inst.x5.net9": {
+          "hide_name": 0,
+          "bits": [ 130 ],
+          "attributes": {
+            "hdlname": "dc_inst x5 net9",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:127.6-127.10"
+          }
+        },
+        "dc_inst.x6.net1": {
+          "hide_name": 0,
+          "bits": [ 133 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net1",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:119.6-119.10"
+          }
+        },
+        "dc_inst.x6.net10": {
+          "hide_name": 0,
+          "bits": [ 132 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net10",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:109.6-109.11"
+          }
+        },
+        "dc_inst.x6.net11": {
+          "hide_name": 0,
+          "bits": [ 134 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net11",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:110.6-110.11"
+          }
+        },
+        "dc_inst.x6.net12": {
+          "hide_name": 0,
+          "bits": [ 135 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net12",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:111.6-111.11"
+          }
+        },
+        "dc_inst.x6.net13": {
+          "hide_name": 0,
+          "bits": [ 136 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net13",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:112.6-112.11"
+          }
+        },
+        "dc_inst.x6.net14": {
+          "hide_name": 0,
+          "bits": [ 137 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net14",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:113.6-113.11"
+          }
+        },
+        "dc_inst.x6.net15": {
+          "hide_name": 0,
+          "bits": [ 138 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net15",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:114.6-114.11"
+          }
+        },
+        "dc_inst.x6.net16": {
+          "hide_name": 0,
+          "bits": [ 139 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net16",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:115.6-115.11"
+          }
+        },
+        "dc_inst.x6.net17": {
+          "hide_name": 0,
+          "bits": [ 140 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net17",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:116.6-116.11"
+          }
+        },
+        "dc_inst.x6.net18": {
+          "hide_name": 0,
+          "bits": [ 141 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net18",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:117.6-117.11"
+          }
+        },
+        "dc_inst.x6.net19": {
+          "hide_name": 0,
+          "bits": [ 142 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net19",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:118.6-118.11"
+          }
+        },
+        "dc_inst.x6.net2": {
+          "hide_name": 0,
+          "bits": [ 131 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net2",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:120.6-120.10"
+          }
+        },
+        "dc_inst.x6.net3": {
+          "hide_name": 0,
+          "bits": [ 143 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net3",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:121.6-121.10"
+          }
+        },
+        "dc_inst.x6.net4": {
+          "hide_name": 0,
+          "bits": [ 145 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net4",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:122.6-122.10"
+          }
+        },
+        "dc_inst.x6.net5": {
+          "hide_name": 0,
+          "bits": [ 146 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net5",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:123.6-123.10"
+          }
+        },
+        "dc_inst.x6.net6": {
+          "hide_name": 0,
+          "bits": [ 147 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net6",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:124.6-124.10"
+          }
+        },
+        "dc_inst.x6.net7": {
+          "hide_name": 0,
+          "bits": [ 148 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net7",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:125.6-125.10"
+          }
+        },
+        "dc_inst.x6.net8": {
+          "hide_name": 0,
+          "bits": [ 149 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net8",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:126.6-126.10"
+          }
+        },
+        "dc_inst.x6.net9": {
+          "hide_name": 0,
+          "bits": [ 150 ],
+          "attributes": {
+            "hdlname": "dc_inst x6 net9",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:127.6-127.10"
+          }
+        },
+        "dc_inst.x7.net1": {
+          "hide_name": 0,
+          "bits": [ 153 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net1",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:289.6-289.10"
+          }
+        },
+        "dc_inst.x7.net10": {
+          "hide_name": 0,
+          "bits": [ 152 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net10",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:279.6-279.11"
+          }
+        },
+        "dc_inst.x7.net11": {
+          "hide_name": 0,
+          "bits": [ 154 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net11",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:280.6-280.11"
+          }
+        },
+        "dc_inst.x7.net12": {
+          "hide_name": 0,
+          "bits": [ 155 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net12",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:281.6-281.11"
+          }
+        },
+        "dc_inst.x7.net13": {
+          "hide_name": 0,
+          "bits": [ 156 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net13",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:282.6-282.11"
+          }
+        },
+        "dc_inst.x7.net14": {
+          "hide_name": 0,
+          "bits": [ 157 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net14",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:283.6-283.11"
+          }
+        },
+        "dc_inst.x7.net15": {
+          "hide_name": 0,
+          "bits": [ 158 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net15",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:284.6-284.11"
+          }
+        },
+        "dc_inst.x7.net16": {
+          "hide_name": 0,
+          "bits": [ 159 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net16",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:285.6-285.11"
+          }
+        },
+        "dc_inst.x7.net17": {
+          "hide_name": 0,
+          "bits": [ 160 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net17",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:286.6-286.11"
+          }
+        },
+        "dc_inst.x7.net18": {
+          "hide_name": 0,
+          "bits": [ 161 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net18",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:287.6-287.11"
+          }
+        },
+        "dc_inst.x7.net19": {
+          "hide_name": 0,
+          "bits": [ 162 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net19",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:288.6-288.11"
+          }
+        },
+        "dc_inst.x7.net2": {
+          "hide_name": 0,
+          "bits": [ 151 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net2",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:290.6-290.10"
+          }
+        },
+        "dc_inst.x7.net3": {
+          "hide_name": 0,
+          "bits": [ 163 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net3",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:291.6-291.10"
+          }
+        },
+        "dc_inst.x7.net4": {
+          "hide_name": 0,
+          "bits": [ 165 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net4",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:292.6-292.10"
+          }
+        },
+        "dc_inst.x7.net5": {
+          "hide_name": 0,
+          "bits": [ 166 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net5",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:293.6-293.10"
+          }
+        },
+        "dc_inst.x7.net6": {
+          "hide_name": 0,
+          "bits": [ 167 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net6",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:294.6-294.10"
+          }
+        },
+        "dc_inst.x7.net7": {
+          "hide_name": 0,
+          "bits": [ 168 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net7",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:295.6-295.10"
+          }
+        },
+        "dc_inst.x7.net8": {
+          "hide_name": 0,
+          "bits": [ 169 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net8",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:296.6-296.10"
+          }
+        },
+        "dc_inst.x7.net9": {
+          "hide_name": 0,
+          "bits": [ 170 ],
+          "attributes": {
+            "hdlname": "dc_inst x7 net9",
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/delay_chain.v:297.6-297.10"
+          }
+        },
+        "delay_sel": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:17.19-17.28"
+          }
+        },
+        "monitor_d": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:22.28-22.37"
+          }
+        },
+        "path": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:15.19-15.23"
+          }
+        },
+        "path_sel": {
+          "hide_name": 0,
+          "bits": [ 15, 16, 17 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:16.19-16.27"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:13.13-13.16"
+          }
+        },
+        "se": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:14.13-14.15"
+          }
+        },
+        "shadow_q": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:21.6-21.14"
+          }
+        },
+        "tdi": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:18.13-18.16"
+          }
+        },
+        "tdo": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/foss/designs/pmu_design/pmu/1-librelane/pmu.v:19.14-19.17"
+          }
+        }
+      }
+    }
+  }
+}

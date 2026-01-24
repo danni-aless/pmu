@@ -1,0 +1,32 @@
+110. Printing statistics.
+
+=== rca ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      184        - wires
+      231        - wire bits
+       59        - public wires
+      106        - public wire bits
+        9        - ports
+       56        - port bits
+      193 2.27E+03 cells
+        1        -   pmu
+       14  140.134   sky130_fd_sc_hd__a21bo_2
+        1   11.261   sky130_fd_sc_hd__a21boi_2
+        1    7.507   sky130_fd_sc_hd__and2_2
+       12   45.043   sky130_fd_sc_hd__conb_1
+       50  1313.76   sky130_fd_sc_hd__dfrtp_2
+       50   187.68   sky130_fd_sc_hd__inv_2
+       30   187.68   sky130_fd_sc_hd__nand2_2
+        2   12.512   sky130_fd_sc_hd__nor2_2
+        1   11.261   sky130_fd_sc_hd__o21bai_2
+       15    93.84   sky130_fd_sc_hd__or2_2
+       16   260.25   sky130_fd_sc_hd__xnor2_2
+
+   Area for cell type \pmu is unknown!
+
+   Chip area for module '\rca': 2270.928000
+     of which used for sequential elements: 1313.760000 (57.85%)
+

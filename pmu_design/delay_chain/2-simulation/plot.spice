@@ -1,0 +1,39 @@
+
+.title Plots
+
+.control
+	let vdd_val = 1.8
+	** Plots
+	set color0=white
+	set color1=black
+	
+	load data.raw
+	plot v(delay_sel2)+4 v(delay_sel1)+2 v(delay_sel0) title 'delay_sel'
+	plot v(in) v(out) title 'Propagation delays'
+	
+	meas tran delay_rise_sel000 TRIG v(in) VAL=VDD_VAL/2 RISE=1 TARG v(out) VAL=VDD_VAL/2 RISE=1
+	meas tran delay_fall_sel000 TRIG v(in) VAL=VDD_VAL/2 FALL=1 TARG v(out) VAL=VDD_VAL/2 FALL=1
+
+	meas tran delay_rise_sel001 TRIG v(in) VAL=VDD_VAL/2 RISE=2 TARG v(out) VAL=VDD_VAL/2 RISE=2
+	meas tran delay_fall_sel001 TRIG v(in) VAL=VDD_VAL/2 FALL=2 TARG v(out) VAL=VDD_VAL/2 FALL=2
+
+	meas tran delay_rise_sel010 TRIG v(in) VAL=VDD_VAL/2 RISE=3 TARG v(out) VAL=VDD_VAL/2 RISE=3
+	meas tran delay_fall_sel010 TRIG v(in) VAL=VDD_VAL/2 FALL=3 TARG v(out) VAL=VDD_VAL/2 FALL=3
+
+	meas tran delay_rise_sel011 TRIG v(in) VAL=VDD_VAL/2 RISE=4 TARG v(out) VAL=VDD_VAL/2 RISE=4
+	meas tran delay_fall_sel011 TRIG v(in) VAL=VDD_VAL/2 FALL=4 TARG v(out) VAL=VDD_VAL/2 FALL=4
+
+	meas tran delay_rise_sel100 TRIG v(in) VAL=VDD_VAL/2 RISE=5 TARG v(out) VAL=VDD_VAL/2 RISE=5
+	meas tran delay_fall_sel100 TRIG v(in) VAL=VDD_VAL/2 FALL=5 TARG v(out) VAL=VDD_VAL/2 FALL=5
+
+	meas tran delay_rise_sel101 TRIG v(in) VAL=VDD_VAL/2 RISE=6 TARG v(out) VAL=VDD_VAL/2 RISE=6
+	meas tran delay_fall_sel101 TRIG v(in) VAL=VDD_VAL/2 FALL=6 TARG v(out) VAL=VDD_VAL/2 FALL=6
+
+	meas tran delay_rise_sel110 TRIG v(in) VAL=VDD_VAL/2 RISE=7 TARG v(out) VAL=VDD_VAL/2 RISE=7
+	meas tran delay_fall_sel110 TRIG v(in) VAL=VDD_VAL/2 FALL=7 TARG v(out) VAL=VDD_VAL/2 FALL=7
+
+	meas tran delay_rise_sel111 TRIG v(in) VAL=VDD_VAL/2 RISE=8 TARG v(out) VAL=VDD_VAL/2 RISE=8
+	meas tran delay_fall_sel111 TRIG v(in) VAL=VDD_VAL/2 FALL=8 TARG v(out) VAL=VDD_VAL/2 FALL=8
+.endc
+
+.end

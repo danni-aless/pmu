@@ -1,0 +1,189 @@
+Reading timing models for corner max_tt_025C_1v80…
+Reading timing library for the 'max_tt_025C_1v80' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing library for the 'max_tt_025C_1v80' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/max_tt_025C_1v80/pmu__max_tt_025C_1v80.lib'…
+Reading timing models for corner min_ss_100C_1v60…
+Reading timing library for the 'min_ss_100C_1v60' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading timing library for the 'min_ss_100C_1v60' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/min_ss_100C_1v60/pmu__min_ss_100C_1v60.lib'…
+[WARNING STA-1140] /foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/min_ss_100C_1v60/pmu__min_ss_100C_1v60.lib line 1, library pmu already exists.
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+[WARNING STA-1140] /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib line 1, library sky130_fd_sc_hd__tt_025C_1v80 already exists.
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/nom_tt_025C_1v80/pmu__nom_tt_025C_1v80.lib'…
+[WARNING STA-1140] /foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/nom_tt_025C_1v80/pmu__nom_tt_025C_1v80.lib line 1, library pmu already exists.
+Reading timing models for corner max_ff_n40C_1v95…
+Reading timing library for the 'max_ff_n40C_1v95' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing library for the 'max_ff_n40C_1v95' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/max_ff_n40C_1v95/pmu__max_ff_n40C_1v95.lib'…
+[WARNING STA-1140] /foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/max_ff_n40C_1v95/pmu__max_ff_n40C_1v95.lib line 1, library pmu already exists.
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+[WARNING STA-1140] /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib line 1, library sky130_fd_sc_hd__ff_n40C_1v95 already exists.
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/nom_ff_n40C_1v95/pmu__nom_ff_n40C_1v95.lib'…
+[WARNING STA-1140] /foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/nom_ff_n40C_1v95/pmu__nom_ff_n40C_1v95.lib line 1, library pmu already exists.
+Reading timing models for corner max_ss_100C_1v60…
+Reading timing library for the 'max_ss_100C_1v60' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+[WARNING STA-1140] /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib line 1, library sky130_fd_sc_hd__ss_100C_1v60 already exists.
+Reading timing library for the 'max_ss_100C_1v60' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/max_ss_100C_1v60/pmu__max_ss_100C_1v60.lib'…
+[WARNING STA-1140] /foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/max_ss_100C_1v60/pmu__max_ss_100C_1v60.lib line 1, library pmu already exists.
+Reading timing models for corner min_tt_025C_1v80…
+Reading timing library for the 'min_tt_025C_1v80' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+[WARNING STA-1140] /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib line 1, library sky130_fd_sc_hd__tt_025C_1v80 already exists.
+Reading timing library for the 'min_tt_025C_1v80' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/min_tt_025C_1v80/pmu__min_tt_025C_1v80.lib'…
+[WARNING STA-1140] /foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/min_tt_025C_1v80/pmu__min_tt_025C_1v80.lib line 1, library pmu already exists.
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+[WARNING STA-1140] /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib line 1, library sky130_fd_sc_hd__ss_100C_1v60 already exists.
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/nom_ss_100C_1v60/pmu__nom_ss_100C_1v60.lib'…
+[WARNING STA-1140] /foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/nom_ss_100C_1v60/pmu__nom_ss_100C_1v60.lib line 1, library pmu already exists.
+Reading timing models for corner min_ff_n40C_1v95…
+Reading timing library for the 'min_ff_n40C_1v95' corner at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+[WARNING STA-1140] /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib line 1, library sky130_fd_sc_hd__ff_n40C_1v95 already exists.
+Reading timing library for the 'min_ff_n40C_1v95' corner at '/foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/min_ff_n40C_1v95/pmu__min_ff_n40C_1v95.lib'…
+[WARNING STA-1140] /foss/designs/pmu_design/rca/1-librelane/macros/pmu/lib/min_ff_n40C_1v95/pmu__min_ff_n40C_1v95.lib line 1, library pmu already exists.
+Reading OpenROAD database at '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/120-openroad-detailedplacement/rca.odb'…
+Reading design constraints file at '/foss/designs/pmu_design/rca/1-librelane/rca.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 3
+[INFO] Setting input delay to: 3
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
+[INFO] Applying custom path constraint for delay chain (so that slack/hold violations are not considered)
+[INFO] Setting RC values…
+[INFO] Configuring cts characterization…
+[INFO] Performing clock tree synthesis…
+[INFO] Looking for the following net(s): clk
+[INFO] Running Clock Tree Synthesis…
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_2
+                    sky130_fd_sc_hd__clkbuf_4
+                    sky130_fd_sc_hd__clkbuf_8
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0011]  Clock net "clk" for macros has 1 sinks.
+[INFO CTS-0011]  Clock net "clk_regs" for registers has 50 sinks.
+[INFO CTS-0008] TritonCTS found 2 clock nets.
+[INFO CTS-0097] Characterization used 3 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 1 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 1.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 25 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(105750, 54370), (105750, 54370)].
+[INFO CTS-0024]  Normalized sink region: [(7.77574, 3.99779), (7.77574, 3.99779)].
+[INFO CTS-0025]     Width:  0.0000.
+[INFO CTS-0026]     Height: 0.0000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1
+    Sub-region size: 0.0000 X 0.0000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 1.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 1 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk_regs.
+[INFO CTS-0028]  Total number of sinks: 50.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 25 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(9465, 20460), (135965, 175380)].
+[INFO CTS-0024]  Normalized sink region: [(0.695956, 1.50441), (9.99743, 12.8956)].
+[INFO CTS-0025]     Width:  9.3015.
+[INFO CTS-0026]     Height: 11.3912.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 25
+    Sub-region size: 9.3015 X 5.6956
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 13
+    Sub-region size: 4.6507 X 5.6956
+[INFO CTS-0034]     Segment length (rounded): 2.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 50.
+[INFO CTS-0018]     Created 2 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 2 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:1..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0018]     Created 5 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 5 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 10:1, 11:1, 14:1, 15:1..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0124] Clock net "clk"
+[INFO CTS-0125]  Sinks 1
+[INFO CTS-0098] Clock net "clk_regs"
+[INFO CTS-0099]  Sinks 53
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 118.30 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 3
+[INFO] Repairing long wires on clock nets…
+[INFO RSZ-0058] Using max wire length 6335um.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Macro                                     1    2472.27
+  Fill cell                               172     645.62
+  Tap cell                                410     512.99
+  Clock buffer                              9     207.70
+  Timing Repair Buffer                     62     286.52
+  Inverter                                 50     187.68
+  Clock inverter                            2      37.54
+  Sequential cell                          50    1251.20
+  Multi-Input combinational cell           92     575.55
+  Total                                   848    6177.07
+Writing OpenROAD database to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.odb'…
+Writing netlist to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.nl.v'…
+Writing powered netlist to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.pnl.v'…
+Writing layout to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.def'…
+Writing timing constraints to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.sdc'…
+[INFO] Legalizing…
+Placement Analysis
+---------------------------------
+total displacement         61.5 u
+average displacement        0.1 u
+max displacement           16.9 u
+original HPWL            8369.9 u
+legalized HPWL           8458.0 u
+delta HPWL                    1 %
+
+[INFO DPL-0020] Mirrored 89 instances
+[INFO DPL-0021] HPWL before            8458.0 u
+[INFO DPL-0022] HPWL after             8380.2 u
+[INFO DPL-0023] HPWL delta               -0.9 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Macro                                     1    2472.27
+  Fill cell                               172     645.62
+  Tap cell                                410     512.99
+  Clock buffer                              9     207.70
+  Timing Repair Buffer                     62     286.52
+  Inverter                                 50     187.68
+  Clock inverter                            2      37.54
+  Sequential cell                          50    1251.20
+  Multi-Input combinational cell           92     575.55
+  Total                                   848    6177.07
+Writing OpenROAD database to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.odb'…
+Writing netlist to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.nl.v'…
+Writing powered netlist to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.pnl.v'…
+Writing layout to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.def'…
+Writing timing constraints to '/foss/designs/pmu_design/rca/1-librelane/runs/run_rca_flow/121-openroad-cts/rca.sdc'…
+%OL_CREATE_REPORT cts.rpt
+[INFO CTS-0003] Total number of Clock Roots: 2.
+[INFO CTS-0004] Total number of Buffers Inserted: 7.
+[INFO CTS-0005] Total number of Clock Subnets: 7.
+[INFO CTS-0006] Total number of Sinks: 51.
+%OL_END_REPORT

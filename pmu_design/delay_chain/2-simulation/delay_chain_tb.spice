@@ -1,0 +1,84 @@
+
+.title Testbench for Delay Chain (sky130)
+
+** Include tecnology library and standard cells
+.lib "/foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.include "/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice"
+
+** Include spice netlist of the circuit
+.include "delay_chain.spice"
+
+** Global parameters
+.param VDD_VAL = 1.8
+.param VSS_VAL = 0
+.param CLOAD   = 10f
+.param TRISE   = 0.05n
+.param TFALL   = 0.05n
+
+** Global nodes used in sky130 standard cells
+.global VGND VNB VPB VPWR
+
+** Power sources
+Vsupply VPWR 0 DC {VDD_VAL}
+Vground VGND 0 DC {VSS_VAL}
+VbulkP  VPB  0 DC {VDD_VAL}
+VbulkN  VNB  0 DC {VSS_VAL}
+
+** Generation of input stimuli
+** in -> in
+Vin in 0 PULSE(0 {VDD_VAL} 2n {TRISE} {TFALL} 2n 20n)
+** delay_sel0 -> delay_sel[0]
+Vdelay_sel0 delay_sel0 0 PULSE(0 {VDD_VAL} 20n {TRISE} {TFALL} 20n 40n)
+** delay_sel1 -> delay_sel[1]
+Vdelay_sel1 delay_sel1 0 PULSE(0 {VDD_VAL} 40n {TRISE} {TFALL} 40n 80n)
+** delay_sel2 -> delay_sel[2]
+Vdelay_sel2 delay_sel2 0 PULSE(0 {VDD_VAL} 80n {TRISE} {TFALL} 80n 160n)
+
+** DUT instantiation
+** out -> out
+Xdut out in delay_sel2 delay_sel1 delay_sel0 delay_chain
+
+** Output capacitor
+Cout out 0 {CLOAD}
+
+** Tran simulation
+.tran 0.01n 160n
+
+** Measuring propagation delays
+.meas tran delay_rise_sel000 TRIG v(in) VAL=VDD_VAL/2 RISE=1 TARG v(out) VAL=VDD_VAL/2 RISE=1
+.meas tran delay_fall_sel000 TRIG v(in) VAL=VDD_VAL/2 FALL=1 TARG v(out) VAL=VDD_VAL/2 FALL=1
+
+.meas tran delay_rise_sel001 TRIG v(in) VAL=VDD_VAL/2 RISE=2 TARG v(out) VAL=VDD_VAL/2 RISE=2
+.meas tran delay_fall_sel001 TRIG v(in) VAL=VDD_VAL/2 FALL=2 TARG v(out) VAL=VDD_VAL/2 FALL=2
+
+.meas tran delay_rise_sel010 TRIG v(in) VAL=VDD_VAL/2 RISE=3 TARG v(out) VAL=VDD_VAL/2 RISE=3
+.meas tran delay_fall_sel010 TRIG v(in) VAL=VDD_VAL/2 FALL=3 TARG v(out) VAL=VDD_VAL/2 FALL=3
+
+.meas tran delay_rise_sel011 TRIG v(in) VAL=VDD_VAL/2 RISE=4 TARG v(out) VAL=VDD_VAL/2 RISE=4
+.meas tran delay_fall_sel011 TRIG v(in) VAL=VDD_VAL/2 FALL=4 TARG v(out) VAL=VDD_VAL/2 FALL=4
+
+.meas tran delay_rise_sel100 TRIG v(in) VAL=VDD_VAL/2 RISE=5 TARG v(out) VAL=VDD_VAL/2 RISE=5
+.meas tran delay_fall_sel100 TRIG v(in) VAL=VDD_VAL/2 FALL=5 TARG v(out) VAL=VDD_VAL/2 FALL=5
+
+.meas tran delay_rise_sel101 TRIG v(in) VAL=VDD_VAL/2 RISE=6 TARG v(out) VAL=VDD_VAL/2 RISE=6
+.meas tran delay_fall_sel101 TRIG v(in) VAL=VDD_VAL/2 FALL=6 TARG v(out) VAL=VDD_VAL/2 FALL=6
+
+.meas tran delay_rise_sel110 TRIG v(in) VAL=VDD_VAL/2 RISE=7 TARG v(out) VAL=VDD_VAL/2 RISE=7
+.meas tran delay_fall_sel110 TRIG v(in) VAL=VDD_VAL/2 FALL=7 TARG v(out) VAL=VDD_VAL/2 FALL=7
+
+.meas tran delay_rise_sel111 TRIG v(in) VAL=VDD_VAL/2 RISE=8 TARG v(out) VAL=VDD_VAL/2 RISE=8
+.meas tran delay_fall_sel111 TRIG v(in) VAL=VDD_VAL/2 FALL=8 TARG v(out) VAL=VDD_VAL/2 FALL=8
+
+.control
+	run
+	** Plots
+	set color0=white
+	set color1=black
+	
+	plot v(delay_sel2)+4 v(delay_sel1)+2 v(delay_sel0) title 'delay_sel'
+	plot v(in) v(out) title 'Propagation delays'
+	
+	write data.raw v(delay_sel2) v(delay_sel1) v(delay_sel0) v(in) v(out)
+.endc
+
+.end

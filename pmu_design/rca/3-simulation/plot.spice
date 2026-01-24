@@ -1,0 +1,21 @@
+
+.title Plots
+
+.control
+	let vdd_val = 1.8
+	** Plots
+	set color0=white
+	set color1=black
+	
+	load data.raw
+	plot v(clk)+2 v(rst)+2 v(xdut.pmu_inst/dc_inst.in) v(xdut.pmu_inst/shadow_q) title 'Shadow FF'
+	plot v(clk)+2 v(rst)+2 v(xdut.pmu_inst/capture_d) v(xdut.pmu_inst/capture_q) title 'Capture FF'
+	plot v(clk)+2 v(rst)+2 v(xdut.pmu_inst/_00_) v(tdo) title 'Monitor FF'
+	plot v(xdut.cout_next)+4 v(xdut.pmu_inst/capture_d)+4 v(xdut.pmu_inst/shadow_q)+2 v(xdut.pmu_inst/capture_q)+2 v(tdo) title 'Propagation delays'
+	plot v(delay_sel2)+4 v(delay_sel1)+2 v(delay_sel0) title 'delay_sel'
+	plot v(cout)+8 v(s_3)+6 v(s_2)+4 v(s_1)+2 v(s_0) title 'RCA Outputs'
+	
+	meas tran delay_rise TRIG v(xdut.cout_next) VAL=VDD_VAL/2 RISE=1 TARG v(xdut.pmu_inst/capture_d) VAL=VDD_VAL/2 RISE=1 FROM=25n
+.endc
+
+.end

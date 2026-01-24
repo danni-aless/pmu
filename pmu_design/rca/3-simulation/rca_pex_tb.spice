@@ -1,0 +1,98 @@
+
+.title Testbench for RCA + PMU (sky130) - PEX
+
+** Include tecnology library and standard cells
+.lib "/foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+** Include spice netlist of the circuit
+.include "rca_pex.spice"
+
+** Global parameters
+.param VDD_VAL 		= 1.8
+.param VSS_VAL 		= 0
+.param CLOAD   		= 10f
+.param TRISE   		= 0.2n
+.param TFALL   		= 0.2n
+.param CLK_PERIOD	= 15n
+
+** Global nodes used in sky130 standard cells
+.global VGND VNB VPB VPWR
+
+** Power sources
+Vsupply VPWR 0 DC {VDD_VAL}
+Vground VGND 0 DC {VSS_VAL}
+VbulkP  VPB  0 DC {VDD_VAL}
+VbulkN  VNB  0 DC {VSS_VAL}
+
+** Logic constant generators
+Vlogic0 logic_0 0 DC {VSS_VAL}
+Vlogic1 logic_1 0 DC {VDD_VAL}
+
+** Generation of input stimuli
+** clk -> clk
+Vclk clk 0 PULSE(0 {VDD_VAL} {CLK_PERIOD/2} {TRISE} {TFALL} {CLK_PERIOD/2} {CLK_PERIOD})
+
+** rst -> rst
+Vrst rst 0 PWL(0 {VDD_VAL} {CLK_PERIOD} {VDD_VAL} {CLK_PERIOD+TFALL} 0)
+
+** delay_sel -> delay_sel
+Vdelay_sel0 delay_sel0 0 DC {VSS_VAL}
+Vdelay_sel1 delay_sel1 0 DC {VDD_VAL}
+Vdelay_sel2 delay_sel2 0 DC {VDD_VAL}
+
+** DUT instantiation
+Xdut VGND VPWR
+** a (0xFFFF)
++ logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1 logic_1
+** b (0x0007)
++ logic_1 logic_0 logic_0 logic_0 logic_0 logic_0 logic_0 logic_1 logic_1 logic_0 logic_0 logic_0 logic_0 logic_0 logic_0 logic_0
+** cin (0)
++ logic_0
++ clk cout delay_sel0 delay_sel1 delay_sel2
++ rst
++ s_0 s_10 s_11 s_12 s_13 s_14 s_15 s_1 s_2 s_3 s_4 s_5 s_6 s_7 s_8 s_9 
++ tdo rca
+
+** Output capacitor
+Cout tdo 0 {CLOAD}
+Ctdo tdo 0 {CLOAD}
+Ccout cout 0 {CLOAD}
+Cs0 s_0 0 {CLOAD}
+Cs1 s_1 0 {CLOAD}
+Cs2 s_2 0 {CLOAD}
+Cs3 s_3 0 {CLOAD}
+Cs4 s_4 0 {CLOAD}
+Cs5 s_5 0 {CLOAD}
+Cs6 s_6 0 {CLOAD}
+Cs7 s_7 0 {CLOAD}
+Cs8 s_8 0 {CLOAD}
+Cs9 s_9 0 {CLOAD}
+Cs10 s_10 0 {CLOAD}
+Cs11 s_11 0 {CLOAD}
+Cs12 s_12 0 {CLOAD}
+Cs13 s_13 0 {CLOAD}
+Cs14 s_14 0 {CLOAD}
+Cs15 s_15 0 {CLOAD}
+
+** Tran simulation
+.tran 0.04n 60n uic
+
+.control
+	run
+	** Plots
+	set color0=white
+	set color1=black
+	
+	plot v(clk)+2 v(rst)+2 v(xdut.pmu_inst/dc_inst.in) v(xdut.pmu_inst/shadow_q) title 'Shadow FF'
+	plot v(clk)+2 v(rst)+2 v(xdut.pmu_inst/capture_d) v(xdut.pmu_inst/capture_q) title 'Capture FF'
+	plot v(clk)+2 v(rst)+2 v(xdut.pmu_inst/_00_) v(tdo) title 'Monitor FF'
+	plot v(xdut.cout_next)+2 v(xdut.pmu_inst/capture_d)+2 v(tdo) title 'Propagation delays'
+	plot v(delay_sel2)+4 v(delay_sel1)+2 v(delay_sel0) title 'delay_sel'
+	
+	write data.raw v(clk) v(rst) v(xdut.pmu_inst/dc_inst.in) v(xdut.pmu_inst/shadow_q)
+	+ v(xdut.pmu_inst/capture_d) v(xdut.pmu_inst/capture_q) v(xdut.pmu_inst/_00_) v(tdo)
+	+ v(xdut.cout_next) v(delay_sel2) v(delay_sel1) v(delay_sel0)
+	+ v(s_0) v(s_1) v(s_2) v(s_3) v(s_4) v(s_5) v(s_6) v(s_7) v(s_8) v(s_9) v(s_10) v(s_11) v(s_12) v(s_13) v(s_14) v(s_15)
+.endc
+
+.end

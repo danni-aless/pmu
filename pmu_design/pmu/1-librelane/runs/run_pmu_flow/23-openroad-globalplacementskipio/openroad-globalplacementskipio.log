@@ -1,0 +1,91 @@
+Reading OpenROAD database at '/foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/20-openroad-generatepdn/pmu.odb'…
+Reading library file at '/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading design constraints file at '/foss/designs/pmu_design/pmu/1-librelane/pmu.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2
+[INFO] Setting input delay to: 2
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
+[INFO] Applying custom path constraint for delay chain (so that slack/hold violations are not considered)
++ global_placement -density 0.8374429999999999 -skip_io -pad_right 0 -pad_left 0 -init_wirelength_coef 0.25
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  5.520 10.880 ) ( 39.100 43.520 ) um
+[INFO GPL-0006] NumInstances:               196
+[INFO GPL-0007] NumPlaceInstances:          158
+[INFO GPL-0008] NumFixedInstances:           38
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                    176
+[INFO GPL-0011] NumPins:                    353
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 44.650 55.370 ) um
+[INFO GPL-0013] CoreBBox: (  5.520 10.880 ) ( 39.100 43.520 ) um
+[INFO GPL-0016] CoreArea:              1096.051 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      107.603 um^2
+[INFO GPL-0018] PlaceInstsArea:         790.758 um^2
+[INFO GPL-0019] Util:                    80.000 %
+[INFO GPL-0020] StdInstsArea:           790.758 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:       167
+[INFO GPL-0032] FillerInit:NumGNets:        176
+[INFO GPL-0033] FillerInit:NumGPins:        353
+[INFO GPL-0023] TargetDensity:            0.837
+[INFO GPL-0024] AvrgPlaceInstArea:        5.005 um^2
+[INFO GPL-0025] IdealBinArea:             5.976 um^2
+[INFO GPL-0026] IdealBinCnt:                183
+[INFO GPL-0027] TotalBinArea:          1096.051 um^2
+[INFO GPL-0028] BinCnt:         8      8
+[INFO GPL-0029] BinSize: (  4.198  4.080 )
+[INFO GPL-0030] NumBins: 64
+[NesterovSolve] Iter:    1 overflow: 0.905 HPWL: 229788
+[NesterovSolve] Iter:   10 overflow: 0.878 HPWL: 181844
+[NesterovSolve] Iter:   20 overflow: 0.838 HPWL: 178522
+[NesterovSolve] Iter:   30 overflow: 0.826 HPWL: 178329
+[NesterovSolve] Iter:   40 overflow: 0.831 HPWL: 178288
+[NesterovSolve] Iter:   50 overflow: 0.833 HPWL: 178302
+[NesterovSolve] Iter:   60 overflow: 0.831 HPWL: 178271
+[NesterovSolve] Iter:   70 overflow: 0.829 HPWL: 178239
+[NesterovSolve] Iter:   80 overflow: 0.828 HPWL: 178225
+[NesterovSolve] Iter:   90 overflow: 0.827 HPWL: 178185
+[NesterovSolve] Iter:  100 overflow: 0.823 HPWL: 178122
+[NesterovSolve] Iter:  110 overflow: 0.822 HPWL: 178133
+[NesterovSolve] Iter:  120 overflow: 0.820 HPWL: 178577
+[NesterovSolve] Iter:  130 overflow: 0.790 HPWL: 181045
+[NesterovSolve] Iter:  140 overflow: 0.759 HPWL: 186265
+[NesterovSolve] Iter:  150 overflow: 0.648 HPWL: 199801
+[NesterovSolve] Iter:  160 overflow: 0.570 HPWL: 218083
+[NesterovSolve] Iter:  170 overflow: 0.543 HPWL: 232624
+[NesterovSolve] Iter:  180 overflow: 0.522 HPWL: 245060
+[NesterovSolve] Iter:  190 overflow: 0.460 HPWL: 257626
+[NesterovSolve] Iter:  200 overflow: 0.416 HPWL: 266443
+[NesterovSolve] Iter:  210 overflow: 0.362 HPWL: 277541
+[NesterovSolve] Iter:  220 overflow: 0.337 HPWL: 284541
+[NesterovSolve] Iter:  230 overflow: 0.302 HPWL: 292875
+[NesterovSolve] Iter:  240 overflow: 0.275 HPWL: 296690
+[NesterovSolve] Iter:  250 overflow: 0.251 HPWL: 300601
+[NesterovSolve] Iter:  260 overflow: 0.229 HPWL: 303297
+[NesterovSolve] Iter:  270 overflow: 0.206 HPWL: 304996
+[NesterovSolve] Iter:  280 overflow: 0.200 HPWL: 304076
+[NesterovSolve] Iter:  290 overflow: 0.180 HPWL: 304506
+[NesterovSolve] Iter:  300 overflow: 0.159 HPWL: 309676
+[NesterovSolve] Iter:  310 overflow: 0.136 HPWL: 314124
+[NesterovSolve] Iter:  320 overflow: 0.114 HPWL: 316269
+[NesterovSolve] Finished with Overflow: 0.099677
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                                24      90.09
+  Tap cell                                 14      17.52
+  Buffer                                  140     533.01
+  Inverter                                  4      15.01
+  Sequential cell                           3      78.83
+  Multi-Input combinational cell           11     163.91
+  Total                                   196     898.36
+Writing OpenROAD database to '/foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/23-openroad-globalplacementskipio/pmu.odb'…
+Writing netlist to '/foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/23-openroad-globalplacementskipio/pmu.nl.v'…
+Writing powered netlist to '/foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/23-openroad-globalplacementskipio/pmu.pnl.v'…
+Writing layout to '/foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/23-openroad-globalplacementskipio/pmu.def'…
+Writing timing constraints to '/foss/designs/pmu_design/pmu/1-librelane/runs/run_pmu_flow/23-openroad-globalplacementskipio/pmu.sdc'…

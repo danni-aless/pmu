@@ -1,0 +1,6 @@
+[WARNING ORD-0039] .openroad ignored with -python
+Placing the following macros:
+{'pmu_inst': ['pmu_inst', 100000, 1000, 'N']}
+Design name: rca
+Placing pmu_inst
+Successfully placed 1 instances.
