@@ -7,7 +7,7 @@ The PMU was devoloped using [IIC-OSIC-TOOLS](https://github.com/iic-jku/IIC-OSIC
 
 1. Clone the [PMU GitHub repository](https://github.com/danni-aless/pmu/) to your local machine or extract the provided ZIP archive.
 
-2. Install [Docker Desktop](https://docs.docker.com/get-started/get-docker/) on your local machine.
+2. Install [Docker Desktop](https://docs.docker.com/get-started/get-docker/) on your local machine (for Windows, WSL should be present too).
 
 3. Start Docker.
 
