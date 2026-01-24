@@ -1,11 +1,11 @@
 # pmu
 A Path Margin Monitor Unit (PMU) to measure path delays in IC designs.
 
-The PMU was devoloped using [IIC-OSIC-TOOLS](https://github.com/iic-jku/IIC-OSIC-TOOLS).
+The PMU was developed using [IIC-OSIC-TOOLS](https://github.com/iic-jku/IIC-OSIC-TOOLS).
 
 ## How to setup the environment
 
-1. Clone the [PMU GitHub repository](https://github.com/danni-aless/pmu/) to your local machine or extract the provided ZIP archive.
+1. Clone the [PMU GitHub repository](https://github.com/danni-aless/pmu/) to your local machine.
 
 2. Install [Docker Desktop](https://docs.docker.com/get-started/get-docker/) on your local machine (for Windows, WSL should be present too).
 
