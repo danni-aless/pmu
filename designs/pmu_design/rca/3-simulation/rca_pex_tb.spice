@@ -92,7 +92,7 @@ Cs15 s_15 0 {CLOAD}
 	write data.raw v(clk) v(rst) v(xdut.pmu_inst/dc_inst.in) v(xdut.pmu_inst/shadow_q)
 	+ v(xdut.pmu_inst/capture_d) v(xdut.pmu_inst/capture_q) v(xdut.pmu_inst/_00_) v(tdo)
 	+ v(xdut.cout_next) v(delay_sel2) v(delay_sel1) v(delay_sel0)
-	+ v(s_0) v(s_1) v(s_2) v(s_3) v(s_4) v(s_5) v(s_6) v(s_7) v(s_8) v(s_9) v(s_10) v(s_11) v(s_12) v(s_13) v(s_14) v(s_15)
+	+ v(s_0) v(s_1) v(s_2) v(s_3) v(s_4) v(s_5) v(s_6) v(s_7) v(s_8) v(s_9) v(s_10) v(s_11) v(s_12) v(s_13) v(s_14) v(s_15) v(cout)
 .endc
 
 .end
