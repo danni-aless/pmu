@@ -1,0 +1,43 @@
+
+.title Plots
+
+.control
+	let vdd_val = 1.8
+	** Plots
+	set color0=white
+	set color1=black
+	
+	load "workspace/pmu/pmu_sim.raw"
+	plot v(clk)+2 v(rst)+2 v(xdut.shadow_d) v(xdut.shadow_q) title 'Shadow FF'
+	plot v(clk)+2 v(rst)+2 v(xdut.capture_d) v(xdut.capture_q) title 'Capture FF'
+	plot v(clk)+2 v(rst)+2 v(xdut._00_) v(tdo) title 'Monitor FF'
+	plot v(path0)+4 v(xdut.capture_d)+4 v(xdut.shadow_q)+2 v(xdut.capture_q)+2 v(tdo) title 'Propagation delays'
+	plot v(delay_sel2)+4 v(delay_sel1)+2 v(delay_sel0) title 'delay_sel'
+	plot v(path_sel2)+4 v(path_sel1)+2 v(path_sel0) title 'path_sel'
+	
+	meas tran delay_rise_sel000 TRIG v(path0) VAL=VDD_VAL/2 RISE=1 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=1
+	meas tran delay_fall_sel000 TRIG v(path0) VAL=VDD_VAL/2 FALL=1 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=1
+
+	meas tran delay_rise_sel001 TRIG v(path0) VAL=VDD_VAL/2 RISE=2 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=2
+	meas tran delay_fall_sel001 TRIG v(path0) VAL=VDD_VAL/2 FALL=2 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=2
+
+	meas tran delay_rise_sel010 TRIG v(path0) VAL=VDD_VAL/2 RISE=3 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=3
+	meas tran delay_fall_sel010 TRIG v(path0) VAL=VDD_VAL/2 FALL=3 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=3
+
+	meas tran delay_rise_sel011 TRIG v(path0) VAL=VDD_VAL/2 RISE=4 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=4
+	meas tran delay_fall_sel011 TRIG v(path0) VAL=VDD_VAL/2 FALL=4 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=4
+
+	meas tran delay_rise_sel100 TRIG v(path0) VAL=VDD_VAL/2 RISE=5 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=5
+	meas tran delay_fall_sel100 TRIG v(path0) VAL=VDD_VAL/2 FALL=5 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=5
+
+	meas tran delay_rise_sel101 TRIG v(path0) VAL=VDD_VAL/2 RISE=6 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=6
+	meas tran delay_fall_sel101 TRIG v(path0) VAL=VDD_VAL/2 FALL=6 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=6
+
+	meas tran delay_rise_sel110 TRIG v(path0) VAL=VDD_VAL/2 RISE=7 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=7
+	meas tran delay_fall_sel110 TRIG v(path0) VAL=VDD_VAL/2 FALL=7 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=7
+
+	meas tran delay_rise_sel111 TRIG v(path0) VAL=VDD_VAL/2 RISE=8 TARG v(xdut.capture_d) VAL=VDD_VAL/2 RISE=8
+	meas tran delay_fall_sel111 TRIG v(path0) VAL=VDD_VAL/2 FALL=8 TARG v(xdut.capture_d) VAL=VDD_VAL/2 FALL=8
+.endc
+
+.end

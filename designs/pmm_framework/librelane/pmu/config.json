@@ -1,0 +1,31 @@
+{
+	"//": "Required variables",
+    "DESIGN_NAME": "pmu",
+    "VERILOG_FILES": [
+        "dir::../../workspace/delay_chain/delay_chain.v",
+        "dir::../../rtl/pmu/pmu.v"
+    ],
+    "CLOCK_PERIOD": 10,
+    "CLOCK_PORT": "clk",
+
+	"//": "A fallback SDC file for when a step-specific SDC file is not defined",
+	"FALLBACK_SDC_FILE": "dir::pmu.sdc",
+	
+	"//": "Custom pin configuration file",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+    
+    "//": "Use only the lower layer for the power grid (useful for macro)",
+    "FP_PDN_MULTILAYER": false,
+    
+    "//": "Core utilization percentage",
+    "FP_CORE_UTIL": 70,
+    
+    "//": "Disable resizer design repair after global placement",
+    "RUN_POST_GPL_DESIGN_REPAIR": false,
+    
+    "//": "Disable resizer timing optimizations after clock tree synthesis",
+    "RUN_POST_CTS_RESIZER_TIMING": false,
+    
+    "//": "Never flatten hierarchy",
+    "SYNTH_HIERARCHY_MODE": "keep"
+}

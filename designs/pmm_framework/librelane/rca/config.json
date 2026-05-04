@@ -1,0 +1,22 @@
+{
+  	"//": "Required variables",
+    "DESIGN_NAME": "rca",
+    "VERILOG_FILES": [
+        "dir::../../rtl/rca/rca.v",
+        "dir::../../rtl/rca/fa.v"
+    ],
+    "CLOCK_PERIOD": 20,
+    "CLOCK_PORT": "clk",
+    
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 200 200",
+
+	"//": "A fallback SDC file for when a step-specific SDC file is not defined",
+	"FALLBACK_SDC_FILE": "dir::rca.sdc",
+    
+    "//": "Custom pin configuration file",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+    
+    "//": "Enable adding a core ring around the design",
+    "FP_PDN_CORE_RING": true
+}
